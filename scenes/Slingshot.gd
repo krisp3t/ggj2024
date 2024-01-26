@@ -10,7 +10,8 @@ enum State {
 var state : State = State.IDLE;
 
 func _ready():
-	pass # Replace with function body.
+	%LeftLine.points[1] = %SlingshotCenter;
+	%RightLine.points[1] = %SlingshotCenter;
 
 
 func _process(delta):
@@ -32,6 +33,8 @@ func _process(delta):
 				player.throw();
 				player.apply_impulse(Vector2(), velocity / 50 * distance);
 				state = State.THROWN;
+				%LeftLine.points[1] = %SlingshotCenter;
+				%RightLine.points[1] = %SlingshotCenter;
 				
 		State.THROWN:
 			return;
