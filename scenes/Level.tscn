@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://bf3mpy8vq5dxy"]
+
+[ext_resource type="PackedScene" uid="uid://2e30utpkit20" path="res://scenes/Classroom.tscn" id="1_l6gkv"]
+
+[sub_resource type="Gradient" id="Gradient_f3bvj"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_x5aqg"]
+gradient = SubResource("Gradient_f3bvj")
+
+[sub_resource type="Gradient" id="Gradient_apkgl"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_3synk"]
+gradient = SubResource("Gradient_apkgl")
+
+[sub_resource type="Gradient" id="Gradient_d3ue2"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_5a5n5"]
+gradient = SubResource("Gradient_d3ue2")
+
+[node name="Level" type="Node2D"]
+
+[node name="Classroom" parent="." instance=ExtResource("1_l6gkv")]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LaughBar" type="TextureProgressBar" parent="UI"]
+custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
+layout_mode = 0
+offset_left = 77.0
+offset_top = 70.0
+offset_right = 333.0
+offset_bottom = 90.0
+texture_under = SubResource("GradientTexture1D_x5aqg")
+texture_over = SubResource("GradientTexture1D_3synk")
+texture_progress = SubResource("GradientTexture1D_5a5n5")

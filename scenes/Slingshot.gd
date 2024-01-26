@@ -10,8 +10,8 @@ enum State {
 var state : State = State.IDLE;
 
 func _ready():
-	%LeftLine.points[1] = %SlingshotCenter;
-	%RightLine.points[1] = %SlingshotCenter;
+	%LeftLine.points[1] = %SlingshotCenter.position;
+	%RightLine.points[1] = %SlingshotCenter.position;
 
 
 func _process(delta):

@@ -1,8 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://va0w2xx6kel4"]
+[gd_scene load_steps=4 format=3 uid="uid://va0w2xx6kel4"]
 
 [ext_resource type="Script" path="res://scenes/Projectile.gd" id="1_hdk22"]
+[ext_resource type="Texture2D" uid="uid://cclcbemkviams" path="res://assets/sprites/png/spitball.png" id="2_sd7wg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gmdps"]
+radius = 48.28
 
 [node name="Projectile" type="RigidBody2D"]
 script = ExtResource("1_hdk22")
@@ -11,3 +13,6 @@ script = ExtResource("1_hdk22")
 shape = SubResource("CircleShape2D_gmdps")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(5, -14)
+scale = Vector2(9.3125, 9.3125)
+texture = ExtResource("2_sd7wg")
