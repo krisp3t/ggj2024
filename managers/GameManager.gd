@@ -38,4 +38,7 @@ func spawn_projectile(type : ProjectileType) -> Projectile:
 	projectile.texture_path = texture;
 	return projectile
 	
+func _input(event) -> void:
+	if Input.is_action_pressed("ESC"):
+		get_tree().quit();
 	

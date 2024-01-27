@@ -1,24 +1,24 @@
-[gd_scene load_steps=7 format=3 uid="uid://c4kpq2pm26shs"]
+[gd_scene load_steps=7 format=3 uid="uid://bxgdjmmkcuxcf"]
 
-[ext_resource type="Texture2D" uid="uid://wwu312iydqnf" path="res://assets/sprites/png/charspritesimple.png" id="1_cfrm7"]
 [ext_resource type="Script" path="res://scenes/Enemy.gd" id="1_wy4yr"]
+[ext_resource type="Texture2D" uid="uid://dk64633ryne35" path="res://assets/sprites/png/classmate2.png" id="2_qkln5"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2sqvm"]
-atlas = ExtResource("1_cfrm7")
-region = Rect2(0, 0, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wibf"]
+atlas = ExtResource("2_qkln5")
+region = Rect2(0, 0, 16, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_om15e"]
-atlas = ExtResource("1_cfrm7")
-region = Rect2(16, 0, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_amvu3"]
+atlas = ExtResource("2_qkln5")
+region = Rect2(16, 0, 16, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pvevq"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2sqvm")
+"texture": SubResource("AtlasTexture_4wibf")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_om15e")
+"texture": SubResource("AtlasTexture_amvu3")
 }],
 "loop": true,
 "name": &"default",

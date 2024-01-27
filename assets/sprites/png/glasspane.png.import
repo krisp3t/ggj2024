@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bt40h8j8hs82m"
-path="res://.godot/imported/book1.png-8da7f0d8f04ab6098271a69aea0c7d01.ctex"
+uid="uid://bcj25n2q27ukj"
+path="res://.godot/imported/glasspane.png-2d38264128b48374e55cd95a640453cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/png/book1.png"
-dest_files=["res://.godot/imported/book1.png-8da7f0d8f04ab6098271a69aea0c7d01.ctex"]
+source_file="res://assets/sprites/png/glasspane.png"
+dest_files=["res://.godot/imported/glasspane.png-2d38264128b48374e55cd95a640453cd.ctex"]
 
 [params]
 
