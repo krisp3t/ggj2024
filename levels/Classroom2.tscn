@@ -6,9 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://tj3mfref5dug" path="res://scenes/Teacher.tscn" id="4_d6n60"]
 [ext_resource type="PackedScene" uid="uid://cim0uqp76txk8" path="res://scenes/Player.tscn" id="5_1rwwy"]
 [ext_resource type="Script" path="res://scenes/Player.gd" id="6_pjtlu"]
-[ext_resource type="PackedScene" path="res://scenes/Enemy.tscn" id="7_3ie0d"]
+[ext_resource type="PackedScene" uid="uid://bxgdjmmkcuxcf" path="res://scenes/Enemy.tscn" id="7_3ie0d"]
 [ext_resource type="Texture2D" uid="uid://dy0umnvwsjsl4" path="res://assets/sprites/png/classmate6.png" id="8_kaybi"]
-[ext_resource type="PackedScene" path="res://scenes/Obstacle.tscn" id="8_yhqh0"]
+[ext_resource type="PackedScene" uid="uid://djdiidob2dv76" path="res://scenes/Obstacle.tscn" id="8_yhqh0"]
 [ext_resource type="Texture2D" uid="uid://dbjm41qi6bnt" path="res://assets/sprites/png/chair.png" id="11_7cwe4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_acx0k"]
