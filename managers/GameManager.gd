@@ -1,10 +1,16 @@
 extends Node
+var projectile_scene := preload("res://scenes/Projectile.tscn")
 
 enum GameState {
 	START,
 	PLAY,
 	WIN,
 	LOSS
+}
+
+enum ProjectileType {
+	ERASER,
+	SPITBALL
 }
 
 var current_game_state := GameState.PLAY;
@@ -18,5 +24,18 @@ func _process(_delta) -> void:
 		GameState.WIN:
 			pass;
 		GameState.LOSS:
-			pass;
+			print_debug("You lose!");
+			current_game_state = GameState.START;
 
+func spawn_projectile(type : ProjectileType) -> Projectile:
+	var texture : String;
+	match type:
+		ProjectileType.ERASER:
+			texture = "res://assets/sprites/png/eraser.png";
+		ProjectileType.SPITBALL:
+			texture = "res://assets/sprites/png/spitball.png";
+	var projectile := projectile_scene.instantiate();
+	projectile.texture_path = texture;
+	return projectile
+	
+	

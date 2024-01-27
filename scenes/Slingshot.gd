@@ -7,10 +7,11 @@ enum State {
 	RESET
 }
 
+signal shot;
+
 var state : State = State.IDLE;
 
 func _ready():
-	print_debug(%SlingshotCenter.position);
 	%LeftLine.points[1] = %SlingshotCenter.position;
 	%RightLine.points[1] = %SlingshotCenter.position;
 
@@ -36,6 +37,7 @@ func _process(delta):
 				projectile.apply_impulse(velocity_vec / 100 * distance);
 				%LeftLine.points[1] = center;
 				%RightLine.points[1] = center;
+				shot.emit();
 				state = State.THROWN;
 		State.THROWN:
 			state = State.IDLE;
