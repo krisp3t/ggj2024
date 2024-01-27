@@ -47,7 +47,3 @@ func _on_ground_area_body_entered(body):
 	if body is Projectile:
 		await get_tree().create_timer(0.5).timeout;
 		body.queue_free();
-		
-
-
-

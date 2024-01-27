@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bf3mpy8vq5dxy"]
+[gd_scene load_steps=16 format=3 uid="uid://bf3mpy8vq5dxy"]
 
 [ext_resource type="Script" path="res://scenes/Level.gd" id="1_3epvc"]
 [ext_resource type="PackedScene" uid="uid://2e30utpkit20" path="res://scenes/Classroom.tscn" id="1_l6gkv"]
@@ -8,10 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://bmuedem6qyet0" path="res://scenes/Slingshot.tscn" id="3_pd07g"]
 [ext_resource type="PackedScene" uid="uid://va0w2xx6kel4" path="res://scenes/Projectile.tscn" id="4_w86ld"]
 [ext_resource type="PackedScene" uid="uid://cim0uqp76txk8" path="res://scenes/Player.tscn" id="5_yj8tj"]
-[ext_resource type="PackedScene" path="res://scenes/Enemy.tscn" id="6_f3kji"]
+[ext_resource type="PackedScene" uid="uid://c4kpq2pm26shs" path="res://scenes/Enemy.tscn" id="6_f3kji"]
 [ext_resource type="PackedScene" uid="uid://tj3mfref5dug" path="res://scenes/Teacher.tscn" id="7_ymp6v"]
 [ext_resource type="Texture2D" uid="uid://byf6x4631f3jm" path="res://assets/sprites/png/classmate1.png" id="11_rfmqk"]
-[ext_resource type="Texture2D" uid="uid://dk64633ryne35" path="res://assets/sprites/png/classmate2.png" id="11_sckh7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_acx0k"]
 texture = ExtResource("2_s7acd")
@@ -34,44 +33,11 @@ texture = ExtResource("2_s7acd")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_acx0k")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xdb2j"]
-atlas = ExtResource("11_sckh7")
-region = Rect2(0, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_44ro7"]
-atlas = ExtResource("11_sckh7")
-region = Rect2(16, 0, 16, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_fmlb5"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_5i31k"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xdb2j")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_44ro7")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8o152"]
-atlas = ExtResource("11_rfmqk")
-region = Rect2(0, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0p8lt"]
-atlas = ExtResource("11_rfmqk")
-region = Rect2(16, 0, 16, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_elm0d"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8o152")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0p8lt")
+"texture": ExtResource("11_rfmqk")
 }],
 "loop": true,
 "name": &"default",
@@ -215,12 +181,11 @@ position = Vector2(1675, 516)
 position = Vector2(985, 929)
 
 [node name="Enemy" parent="Classroom" instance=ExtResource("6_f3kji")]
-position = Vector2(1076, 203)
-sprite = SubResource("SpriteFrames_fmlb5")
+position = Vector2(985, 194)
 
 [node name="Enemy2" parent="Classroom" instance=ExtResource("6_f3kji")]
-position = Vector2(424, 517)
-sprite = SubResource("SpriteFrames_elm0d")
+position = Vector2(398, 820)
+sprite = SubResource("SpriteFrames_5i31k")
 
 [node name="GroundArea" type="Area2D" parent="Classroom"]
 monitorable = false
