@@ -14,9 +14,10 @@ func _ready():
 func _process(delta):
 	match direction:
 		Direction.LEFT:
-			position.x -= 10 * delta;
+			print_debug(position);
+			position.x -= 100 * delta;
 		Direction.RIGHT:
-			position.x += 10 * delta;
+			position.x += 100 * delta;
 
 func _on_raycast_timer_timeout():
 	var x : int = randi_range(-500, 500);
@@ -26,15 +27,14 @@ func _on_raycast_timer_timeout():
 
 func _on_move_timer_timeout():
 	var i := randi_range(0, 2);
-	var d : Direction;
 	match i:
 		0: 
-			d = Direction.FORWARD;
+			direction = Direction.FORWARD;
 			$AnimatedSprite2D.play("forward");
 		1:
-			d = Direction.LEFT;
+			direction = Direction.LEFT;
 			$AnimatedSprite2D.play("left");
 		2:
-			d = Direction.RIGHT;
+			direction = Direction.RIGHT;
 			$AnimatedSprite2D.play("right");
 	
