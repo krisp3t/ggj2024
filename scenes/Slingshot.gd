@@ -33,7 +33,7 @@ func _process(delta):
 				var velocity_vec = center - location_vec;
 				var projectile : RigidBody2D = get_tree().get_nodes_in_group("Projectile")[0];
 				projectile.throw();
-				projectile.apply_impulse(velocity_vec / 50 * distance);
+				projectile.apply_impulse(velocity_vec / 100 * distance);
 				%LeftLine.points[1] = center;
 				%RightLine.points[1] = center;
 				state = State.THROWN;
