@@ -3,22 +3,22 @@
 [ext_resource type="Script" path="res://scenes/Enemy.gd" id="1_wy4yr"]
 [ext_resource type="Texture2D" uid="uid://dj1vwc5dlr865" path="res://assets/sprites/png/maincharacter.png" id="2_vygjd"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_76y8r"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_h155y"]
 atlas = ExtResource("2_vygjd")
-region = Rect2(0, 0, 16, 16)
+region = Rect2(0, 0, 16, 27)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jo7no"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1jpk"]
 atlas = ExtResource("2_vygjd")
-region = Rect2(16, 0, 16, 16)
+region = Rect2(16, 0, 16, 27)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3wmwu"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_76y8r")
+"texture": SubResource("AtlasTexture_h155y")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jo7no")
+"texture": SubResource("AtlasTexture_f1jpk")
 }],
 "loop": true,
 "name": &"new_animation",
@@ -36,6 +36,7 @@ script = ExtResource("1_wy4yr")
 scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_3wmwu")
 animation = &"new_animation"
+frame_progress = 0.836702
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_n0n6l")
