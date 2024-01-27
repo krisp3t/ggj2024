@@ -46,8 +46,13 @@ func _on_slingshot_shot():
 func _on_ground_area_body_entered(body):
 	if body is Projectile:
 		await get_tree().create_timer(0.5).timeout;
+<<<<<<< HEAD
 		body.queue_free();
 		
 
 
 
+=======
+		if is_instance_valid(body):
+			body.queue_free();
+>>>>>>> 30ed24773fe84d516a86f17fcaed899c65f1cd7c

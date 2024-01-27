@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=22 format=3 uid="uid://bf3mpy8vq5dxy"]
+=======
+[gd_scene load_steps=15 format=3 uid="uid://bf3mpy8vq5dxy"]
+>>>>>>> 30ed24773fe84d516a86f17fcaed899c65f1cd7c
 
 [ext_resource type="Script" path="res://scenes/Level.gd" id="1_3epvc"]
 [ext_resource type="PackedScene" uid="uid://2e30utpkit20" path="res://scenes/Classroom.tscn" id="1_l6gkv"]
@@ -10,8 +14,12 @@
 [ext_resource type="PackedScene" uid="uid://cim0uqp76txk8" path="res://scenes/Player.tscn" id="5_yj8tj"]
 [ext_resource type="PackedScene" path="res://scenes/Enemy.tscn" id="6_f3kji"]
 [ext_resource type="PackedScene" uid="uid://tj3mfref5dug" path="res://scenes/Teacher.tscn" id="7_ymp6v"]
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://byf6x4631f3jm" path="res://assets/sprites/png/classmate1.png" id="11_rfmqk"]
 [ext_resource type="Texture2D" uid="uid://dk64633ryne35" path="res://assets/sprites/png/classmate2.png" id="11_sckh7"]
+=======
+[ext_resource type="Script" path="res://scenes/Player.gd" id="10_xkwso"]
+>>>>>>> 30ed24773fe84d516a86f17fcaed899c65f1cd7c
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_acx0k"]
 texture = ExtResource("2_s7acd")
@@ -34,6 +42,7 @@ texture = ExtResource("2_s7acd")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_acx0k")
 
+<<<<<<< HEAD
 [sub_resource type="AtlasTexture" id="AtlasTexture_xdb2j"]
 atlas = ExtResource("11_sckh7")
 region = Rect2(0, 0, 16, 32)
@@ -78,6 +87,8 @@ animations = [{
 "speed": 5.0
 }]
 
+=======
+>>>>>>> 30ed24773fe84d516a86f17fcaed899c65f1cd7c
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e6mq1"]
 size = Vector2(1919, 88)
 
@@ -213,15 +224,19 @@ position = Vector2(1675, 516)
 
 [node name="Player" parent="Classroom" instance=ExtResource("5_yj8tj")]
 position = Vector2(985, 929)
+script = ExtResource("10_xkwso")
 
 [node name="Enemy" parent="Classroom" instance=ExtResource("6_f3kji")]
 position = Vector2(1076, 203)
 sprite = SubResource("SpriteFrames_fmlb5")
 
+<<<<<<< HEAD
 [node name="Enemy2" parent="Classroom" instance=ExtResource("6_f3kji")]
 position = Vector2(424, 517)
 sprite = SubResource("SpriteFrames_elm0d")
 
+=======
+>>>>>>> 30ed24773fe84d516a86f17fcaed899c65f1cd7c
 [node name="GroundArea" type="Area2D" parent="Classroom"]
 monitorable = false
 

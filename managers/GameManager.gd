@@ -26,6 +26,10 @@ func _process(_delta) -> void:
 		GameState.LOSS:
 			print_debug("You lose!");
 			current_game_state = GameState.START;
+			
+func _input(ev):
+	if Input.is_action_pressed("ESC"):
+		get_tree().quit();
 
 func spawn_projectile(type : ProjectileType) -> Projectile:
 	var texture : String;
