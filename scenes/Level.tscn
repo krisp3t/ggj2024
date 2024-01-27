@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bf3mpy8vq5dxy"]
+[gd_scene load_steps=16 format=3 uid="uid://bf3mpy8vq5dxy"]
 
 [ext_resource type="Script" path="res://scenes/Level.gd" id="1_3epvc"]
 [ext_resource type="PackedScene" uid="uid://2e30utpkit20" path="res://scenes/Classroom.tscn" id="1_l6gkv"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cim0uqp76txk8" path="res://scenes/Player.tscn" id="5_yj8tj"]
 [ext_resource type="PackedScene" uid="uid://c4kpq2pm26shs" path="res://scenes/Enemy.tscn" id="6_f3kji"]
 [ext_resource type="PackedScene" uid="uid://tj3mfref5dug" path="res://scenes/Teacher.tscn" id="7_ymp6v"]
+[ext_resource type="Texture2D" uid="uid://byf6x4631f3jm" path="res://assets/sprites/png/classmate1.png" id="11_rfmqk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_acx0k"]
 texture = ExtResource("2_s7acd")
@@ -31,6 +32,17 @@ texture = ExtResource("2_s7acd")
 [sub_resource type="TileSet" id="TileSet_cjcqm"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_acx0k")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5i31k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_rfmqk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e6mq1"]
 size = Vector2(1919, 88)
@@ -170,6 +182,10 @@ position = Vector2(985, 929)
 
 [node name="Enemy" parent="Classroom" instance=ExtResource("6_f3kji")]
 position = Vector2(985, 194)
+
+[node name="Enemy2" parent="Classroom" instance=ExtResource("6_f3kji")]
+position = Vector2(398, 820)
+sprite = SubResource("SpriteFrames_5i31k")
 
 [node name="GroundArea" type="Area2D" parent="Classroom"]
 monitorable = false
