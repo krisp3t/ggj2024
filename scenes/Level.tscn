@@ -1,9 +1,8 @@
-[gd_scene load_steps=19 format=3 uid="uid://bf3mpy8vq5dxy"]
+[gd_scene load_steps=17 format=3 uid="uid://bf3mpy8vq5dxy"]
 
 [ext_resource type="Script" path="res://scenes/Level.gd" id="1_3epvc"]
 [ext_resource type="PackedScene" uid="uid://2e30utpkit20" path="res://scenes/Classroom.tscn" id="1_l6gkv"]
 [ext_resource type="Theme" uid="uid://uy4x5o3yqavx" path="res://themes/theme.tres" id="2_a7uaf"]
-[ext_resource type="Texture2D" uid="uid://d01eqxjh7q5qr" path="res://assets/tilemap/png/tilemap.png" id="2_s7acd"]
 [ext_resource type="FontFile" uid="uid://dcnshewifaa33" path="res://assets/ui/HeroOfFools.ttf" id="3_m630d"]
 [ext_resource type="PackedScene" uid="uid://bmuedem6qyet0" path="res://scenes/Slingshot.tscn" id="3_pd07g"]
 [ext_resource type="PackedScene" uid="uid://va0w2xx6kel4" path="res://scenes/Projectile.tscn" id="4_w86ld"]
@@ -15,26 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://b6705bipgxb5i" path="res://assets/sprites/png/book3.png" id="13_gfjhe"]
 [ext_resource type="Texture2D" uid="uid://0voljsmfe2v8" path="res://assets/sprites/png/book2.png" id="13_h7r1n"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_acx0k"]
-texture = ExtResource("2_s7acd")
-0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:0/0 = 0
-1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:0/0/physics_layer_0/angular_velocity = 0.0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:1/0 = 0
-1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:1/0/physics_layer_0/angular_velocity = 0.0
-0:1/0 = 0
-0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:1/0/physics_layer_0/angular_velocity = 0.0
-
 [sub_resource type="TileSet" id="TileSet_cjcqm"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_acx0k")
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_me1el"]
 bounce = 0.75
