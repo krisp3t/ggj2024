@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://dn1nkxm4rr7fr"]
+[gd_scene load_steps=16 format=3 uid="uid://dn1nkxm4rr7fr"]
 
 [ext_resource type="Texture2D" uid="uid://d01eqxjh7q5qr" path="res://assets/tilemap/png/tilemap.png" id="1_7b3np"]
+[ext_resource type="Script" path="res://levels/Classroom.gd" id="1_kr0ym"]
 [ext_resource type="PackedScene" uid="uid://bmuedem6qyet0" path="res://scenes/Slingshot.tscn" id="2_nt5ib"]
 [ext_resource type="PackedScene" uid="uid://va0w2xx6kel4" path="res://scenes/Projectile.tscn" id="3_s3xlv"]
 [ext_resource type="PackedScene" uid="uid://tj3mfref5dug" path="res://scenes/Teacher.tscn" id="4_d6n60"]
@@ -40,6 +41,7 @@ absorbent = true
 size = Vector2(1919, 88)
 
 [node name="Classroom1" type="Node2D"]
+script = ExtResource("1_kr0ym")
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(4, 4)
@@ -81,3 +83,6 @@ sprite = ExtResource("9_jl2pr")
 position = Vector2(659, 555)
 rotation = -1.06989
 sprite = ExtResource("10_5tngh")
+
+[connection signal="shot" from="Slingshot" to="." method="_on_slingshot_shot"]
+[connection signal="body_entered" from="GroundArea" to="." method="_on_ground_area_body_entered"]
