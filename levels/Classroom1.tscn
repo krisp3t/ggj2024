@@ -1,0 +1,83 @@
+[gd_scene load_steps=15 format=3 uid="uid://dn1nkxm4rr7fr"]
+
+[ext_resource type="Texture2D" uid="uid://d01eqxjh7q5qr" path="res://assets/tilemap/png/tilemap.png" id="1_7b3np"]
+[ext_resource type="PackedScene" uid="uid://bmuedem6qyet0" path="res://scenes/Slingshot.tscn" id="2_nt5ib"]
+[ext_resource type="PackedScene" uid="uid://va0w2xx6kel4" path="res://scenes/Projectile.tscn" id="3_s3xlv"]
+[ext_resource type="PackedScene" uid="uid://tj3mfref5dug" path="res://scenes/Teacher.tscn" id="4_d6n60"]
+[ext_resource type="PackedScene" uid="uid://cim0uqp76txk8" path="res://scenes/Player.tscn" id="5_1rwwy"]
+[ext_resource type="Script" path="res://scenes/Player.gd" id="6_pjtlu"]
+[ext_resource type="PackedScene" uid="uid://c4kpq2pm26shs" path="res://scenes/Enemy.tscn" id="7_3ie0d"]
+[ext_resource type="PackedScene" uid="uid://bv40xhqo52p3o" path="res://scenes/Obstacle.tscn" id="8_yhqh0"]
+[ext_resource type="Texture2D" uid="uid://b6705bipgxb5i" path="res://assets/sprites/png/book3.png" id="9_jl2pr"]
+[ext_resource type="Texture2D" uid="uid://0voljsmfe2v8" path="res://assets/sprites/png/book2.png" id="10_5tngh"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_acx0k"]
+texture = ExtResource("1_7b3np")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_id2p5"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_acx0k")
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2cvjx"]
+bounce = 0.75
+absorbent = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ibffp"]
+size = Vector2(1919, 88)
+
+[node name="Classroom1" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2(4, 4)
+tile_set = SubResource("TileSet_id2p5")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 3, 0, 0, 2, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 10, 0, 0, 9, 0, 0, 65536, 65536, 0, 131072, 65536, 0, 196608, 65536, 0, 262144, 65536, 0, 327680, 65536, 0, 393216, 0, 0, 458752, 0, 0, 524288, 0, 0, 589824, 0, 0, 655360, 0, 0, 720896, 0, 0, 786432, 0, 0, 851968, 0, 0, 917504, 0, 0, 983040, 0, 0, 1048576, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 21, 0, 0, 22, 0, 0, 23, 0, 0, 24, 0, 0, 25, 0, 0, 26, 0, 0, 27, 0, 0, 28, 0, 0, 29, 0, 0, 65565, 0, 0, 131101, 0, 0, 196637, 0, 0, 262173, 0, 0, 327709, 0, 0, 393245, 0, 0, 458781, 0, 0, 524317, 0, 0, 589853, 0, 0, 655389, 0, 0, 720925, 0, 0, 786461, 0, 0, 851997, 0, 0, 917533, 0, 0, 983069, 0, 0, 1048605, 0, 0, 1048577, 0, 0, 1048578, 0, 0, 1048579, 0, 0, 1048580, 0, 0, 1048581, 0, 0, 1048582, 0, 0, 1048583, 0, 0, 1048584, 0, 0, 1048585, 0, 0, 1048586, 0, 0, 1048587, 0, 0, 1048588, 0, 0, 1048589, 0, 0, 1048590, 0, 0, 1048591, 0, 0, 1048592, 0, 0, 1048593, 0, 0, 1048594, 0, 0, 1048595, 0, 0, 1048596, 0, 0, 1048597, 0, 0, 1048598, 0, 0, 1048599, 0, 0, 1048600, 0, 0, 1048601, 0, 0, 1048602, 0, 0, 1048603, 0, 0, 1048604, 0, 0)
+
+[node name="Slingshot" parent="." instance=ExtResource("2_nt5ib")]
+unique_name_in_owner = true
+position = Vector2(986, 797)
+
+[node name="Projectile" parent="." instance=ExtResource("3_s3xlv")]
+position = Vector2(985, 769)
+physics_material_override = SubResource("PhysicsMaterial_2cvjx")
+
+[node name="Teacher" parent="." instance=ExtResource("4_d6n60")]
+position = Vector2(1675, 516)
+
+[node name="Player" parent="." instance=ExtResource("5_1rwwy")]
+position = Vector2(985, 929)
+script = ExtResource("6_pjtlu")
+
+[node name="Enemy" parent="." instance=ExtResource("7_3ie0d")]
+position = Vector2(985, 194)
+
+[node name="GroundArea" type="Area2D" parent="."]
+monitorable = false
+
+[node name="GroundCollision" type="CollisionShape2D" parent="GroundArea"]
+position = Vector2(964.5, 1065)
+shape = SubResource("RectangleShape2D_ibffp")
+
+[node name="Obstacle" parent="." instance=ExtResource("8_yhqh0")]
+position = Vector2(1296, 554)
+rotation = 0.335103
+sprite = ExtResource("9_jl2pr")
+
+[node name="Obstacle2" parent="." instance=ExtResource("8_yhqh0")]
+position = Vector2(659, 555)
+rotation = -1.06989
+sprite = ExtResource("10_5tngh")

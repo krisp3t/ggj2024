@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bf3mpy8vq5dxy"]
+[gd_scene load_steps=19 format=3 uid="uid://bf3mpy8vq5dxy"]
 
 [ext_resource type="Script" path="res://scenes/Level.gd" id="1_3epvc"]
 [ext_resource type="PackedScene" uid="uid://2e30utpkit20" path="res://scenes/Classroom.tscn" id="1_l6gkv"]
@@ -11,6 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://c4kpq2pm26shs" path="res://scenes/Enemy.tscn" id="6_f3kji"]
 [ext_resource type="PackedScene" uid="uid://tj3mfref5dug" path="res://scenes/Teacher.tscn" id="7_ymp6v"]
 [ext_resource type="Script" path="res://scenes/Player.gd" id="10_xkwso"]
+[ext_resource type="PackedScene" uid="uid://bv40xhqo52p3o" path="res://scenes/Obstacle.tscn" id="12_vnuq1"]
+[ext_resource type="Texture2D" uid="uid://b6705bipgxb5i" path="res://assets/sprites/png/book3.png" id="13_gfjhe"]
+[ext_resource type="Texture2D" uid="uid://0voljsmfe2v8" path="res://assets/sprites/png/book2.png" id="13_h7r1n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_acx0k"]
 texture = ExtResource("2_s7acd")
@@ -32,6 +35,10 @@ texture = ExtResource("2_s7acd")
 [sub_resource type="TileSet" id="TileSet_cjcqm"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_acx0k")
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_me1el"]
+bounce = 0.75
+absorbent = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e6mq1"]
 size = Vector2(1919, 88)
@@ -162,6 +169,7 @@ position = Vector2(986, 797)
 
 [node name="Projectile" parent="Classroom" instance=ExtResource("4_w86ld")]
 position = Vector2(985, 769)
+physics_material_override = SubResource("PhysicsMaterial_me1el")
 
 [node name="Teacher" parent="Classroom" instance=ExtResource("7_ymp6v")]
 position = Vector2(1675, 516)
@@ -179,6 +187,16 @@ monitorable = false
 [node name="GroundCollision" type="CollisionShape2D" parent="Classroom/GroundArea"]
 position = Vector2(964.5, 1065)
 shape = SubResource("RectangleShape2D_e6mq1")
+
+[node name="Obstacle" parent="Classroom" instance=ExtResource("12_vnuq1")]
+position = Vector2(1296, 554)
+rotation = 0.335103
+sprite = ExtResource("13_gfjhe")
+
+[node name="Obstacle2" parent="Classroom" instance=ExtResource("12_vnuq1")]
+position = Vector2(659, 555)
+rotation = -1.06989
+sprite = ExtResource("13_h7r1n")
 
 [node name="Timers" type="Node2D" parent="."]
 
