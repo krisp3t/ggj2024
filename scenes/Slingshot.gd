@@ -31,9 +31,10 @@ func _process(delta):
 			else:
 				var distance := location_vec.distance_to(center);
 				var velocity_vec = center - location_vec;
-				var projectile : RigidBody2D = get_tree().get_nodes_in_group("SelectedProjectile")[0];
-				projectile.throw();
-				projectile.apply_impulse(velocity_vec / 10 * distance);
+				if len(get_tree().get_nodes_in_group("SelectedProjectile")) > 0:
+					var projectile : RigidBody2D = get_tree().get_nodes_in_group("SelectedProjectile")[0];
+					projectile.throw();
+					projectile.apply_impulse(velocity_vec / 10 * distance);
 				%LeftLine.points[1] = center;
 				%RightLine.points[1] = center;
 				shot.emit();
