@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://uy4x5o3yqavx"]
+
+[ext_resource type="FontFile" uid="uid://dcnshewifaa33" path="res://assets/ui/HeroOfFools.ttf" id="1_def7w"]
+[ext_resource type="FontFile" uid="uid://dtlg030tod4vl" path="res://assets/ui/LapsusPro-Bold.otf" id="1_qkfpa"]
+
+[resource]
+default_font = ExtResource("1_def7w")
+Button/fonts/font = ExtResource("1_qkfpa")

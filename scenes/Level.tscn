@@ -1,8 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://bf3mpy8vq5dxy"]
+[gd_scene load_steps=14 format=3 uid="uid://bf3mpy8vq5dxy"]
 
 [ext_resource type="Script" path="res://scenes/Level.gd" id="1_3epvc"]
 [ext_resource type="PackedScene" uid="uid://2e30utpkit20" path="res://scenes/Classroom.tscn" id="1_l6gkv"]
+[ext_resource type="Theme" uid="uid://uy4x5o3yqavx" path="res://themes/theme.tres" id="2_a7uaf"]
 [ext_resource type="Texture2D" uid="uid://d01eqxjh7q5qr" path="res://assets/tilemap/png/tilemap.png" id="2_s7acd"]
+[ext_resource type="FontFile" uid="uid://dcnshewifaa33" path="res://assets/ui/HeroOfFools.ttf" id="3_m630d"]
 [ext_resource type="PackedScene" uid="uid://bmuedem6qyet0" path="res://scenes/Slingshot.tscn" id="3_pd07g"]
 [ext_resource type="PackedScene" uid="uid://va0w2xx6kel4" path="res://scenes/Projectile.tscn" id="4_w86ld"]
 [ext_resource type="PackedScene" uid="uid://cim0uqp76txk8" path="res://scenes/Player.tscn" id="5_yj8tj"]
@@ -46,27 +48,31 @@ offset_bottom = 40.0
 
 [node name="LaughLabel" type="Label" parent="UI/CanvasLayer"]
 offset_left = 95.0
-offset_top = 81.0
-offset_right = 303.0
-offset_bottom = 169.0
+offset_top = 95.0
+offset_right = 261.0
+offset_bottom = 162.0
+theme = ExtResource("2_a7uaf")
+theme_override_fonts/font = ExtResource("3_m630d")
 theme_override_font_sizes/font_size = 64
 text = "Laugh:"
 
 [node name="LaughProgressBar" type="ProgressBar" parent="UI/CanvasLayer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 2.08165e-12)
-offset_left = 324.0
+offset_left = 287.0
 offset_top = 107.0
 offset_right = 524.0
 offset_bottom = 156.0
+theme = ExtResource("2_a7uaf")
 theme_override_font_sizes/font_size = 32
 
 [node name="CraftLabel" type="Label" parent="UI/CanvasLayer"]
 offset_left = 96.0
 offset_top = 199.0
-offset_right = 432.0
+offset_right = 530.0
 offset_bottom = 263.0
-theme_override_font_sizes/font_size = 40
+theme = ExtResource("2_a7uaf")
+theme_override_font_sizes/font_size = 57
 text = "Craft a projectile:"
 
 [node name="Eraser" type="Control" parent="UI/CanvasLayer"]
@@ -98,9 +104,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_a7uaf")
+theme_override_colors/font_color = Color(1, 0.482353, 0.823529, 1)
 theme_override_font_sizes/font_size = 40
 disabled = true
 text = "Eraser"
+expand_icon = true
 
 [node name="Spitball" type="Control" parent="UI/CanvasLayer"]
 layout_mode = 3
@@ -131,9 +140,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_a7uaf")
+theme_override_colors/font_color = Color(0.352941, 0.454902, 0.996078, 1)
 theme_override_font_sizes/font_size = 40
 disabled = true
 text = "Spitball"
+expand_icon = true
 
 [node name="Classroom" parent="." instance=ExtResource("1_l6gkv")]
 
@@ -151,7 +163,7 @@ position = Vector2(986, 797)
 position = Vector2(985, 769)
 
 [node name="Teacher" parent="Classroom" instance=ExtResource("7_ymp6v")]
-position = Vector2(1675, 515)
+position = Vector2(1675, 516)
 
 [node name="Player" parent="Classroom" instance=ExtResource("5_yj8tj")]
 position = Vector2(985, 929)
