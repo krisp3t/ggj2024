@@ -4,9 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://cclcbemkviams" path="res://assets/sprites/png/spitball.png" id="2_sd7wg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gmdps"]
-radius = 48.28
+radius = 27.38
 
-[node name="Projectile" type="RigidBody2D" groups=["Projectile"]]
+[node name="Projectile" type="RigidBody2D" groups=["SelectedProjectile"]]
 script = ExtResource("1_hdk22")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

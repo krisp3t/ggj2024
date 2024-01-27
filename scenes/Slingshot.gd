@@ -22,19 +22,18 @@ func _process(delta):
 		State.IDLE:
 			return;
 		State.PULLING:
+			var location_vec := get_local_mouse_position();
+			if location_vec.distance_to(center) > 150:
+				location_vec = center + (location_vec - center).normalized() * 150;
 			if Input.is_action_pressed("LMouse"):
-				var mouse_pos := get_local_mouse_position();
-				if mouse_pos.distance_to(center) > 150:
-					mouse_pos = center + (mouse_pos - center).normalized() * 150;
-				%LeftLine.points[1] = mouse_pos;
-				%RightLine.points[1] = mouse_pos;
+				%LeftLine.points[1] = location_vec;
+				%RightLine.points[1] = location_vec;
 			else:
-				var location_vec := get_local_mouse_position();
 				var distance := location_vec.distance_to(center);
 				var velocity_vec = center - location_vec;
-				var projectile : RigidBody2D = get_tree().get_nodes_in_group("Projectile")[0];
+				var projectile : RigidBody2D = get_tree().get_nodes_in_group("SelectedProjectile")[0];
 				projectile.throw();
-				projectile.apply_impulse(velocity_vec / 100 * distance);
+				projectile.apply_impulse(velocity_vec / 10 * distance);
 				%LeftLine.points[1] = center;
 				%RightLine.points[1] = center;
 				shot.emit();
