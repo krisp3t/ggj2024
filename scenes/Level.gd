@@ -24,7 +24,7 @@ func _on_eraser_button_pressed():
 	%EraserButton.disabled = true;
 	%EraserTimer.start();
 	var projectile : Projectile = game_manager.spawn_projectile(game_manager.ProjectileType.ERASER);
-	projectile.global_position = %Slingshot/%SlingshotCenter.global_position + Vector2(0, -28);
+	projectile.global_position = %Classroom/%Slingshot/%SlingshotCenter.global_position + Vector2(0, -28);
 	add_child(projectile);
 	is_projectile_loaded = true;
 
@@ -32,7 +32,7 @@ func _on_spitball_button_pressed():
 	%SpitballButton.disabled = true;
 	%SpitballTimer.start();
 	var projectile : Projectile = game_manager.spawn_projectile(game_manager.ProjectileType.SPITBALL);
-	projectile.global_position = %Slingshot/%SlingshotCenter.global_position + Vector2(0, -28);
+	projectile.global_position = %Classroom/%Slingshot/%SlingshotCenter.global_position + Vector2(0, -28);
 	add_child(projectile);
 	is_projectile_loaded = true;
 	
@@ -43,8 +43,4 @@ func _on_slingshot_shot():
 	if %SpitballTimer.is_stopped():
 		%SpitballButton.disabled = false;	
 	
-func _on_ground_area_body_entered(body):
-	if body is Projectile:
-		await get_tree().create_timer(0.5).timeout;
-		if is_instance_valid(body):
-			body.queue_free();
+
