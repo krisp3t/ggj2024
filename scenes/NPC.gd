@@ -1,6 +1,5 @@
 extends RigidBody2D
 @export var sprite : SpriteFrames;
-@export var laugh_value : int
 
 func _ready():
 	set_freeze_enabled(true);
