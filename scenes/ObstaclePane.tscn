@@ -1,17 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://bv40xhqo52p3o"]
+[gd_scene load_steps=4 format=3 uid="uid://dhrr8mh3t0arb"]
 
-[ext_resource type="Texture2D" uid="uid://bfgpa2ir6svn7" path="res://assets/sprites/png/book1.png" id="1_1627w"]
 [ext_resource type="Script" path="res://scenes/Obstacle.gd" id="1_kbnmr"]
+[ext_resource type="Texture2D" uid="uid://bcj25n2q27ukj" path="res://assets/sprites/png/glasspane.png" id="2_nxlbg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8r3qe"]
-size = Vector2(36, 48)
+size = Vector2(511, 61)
 
-[node name="Obstacle" type="RigidBody2D"]
+[node name="ObstaclePane" type="RigidBody2D"]
 script = ExtResource("1_kbnmr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(4, 4)
-texture = ExtResource("1_1627w")
+texture = ExtResource("2_nxlbg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_8r3qe")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cvc1vqmb0kuo0"]
+[gd_scene load_steps=18 format=3 uid="uid://cvc1vqmb0kuo0"]
 
 [ext_resource type="Texture2D" uid="uid://d01eqxjh7q5qr" path="res://assets/tilemap/png/tilemap.png" id="1_7b3np"]
 [ext_resource type="PackedScene" uid="uid://bmuedem6qyet0" path="res://scenes/Slingshot.tscn" id="2_nt5ib"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" path="res://scenes/Enemy.tscn" id="7_3ie0d"]
 [ext_resource type="Texture2D" uid="uid://dy0umnvwsjsl4" path="res://assets/sprites/png/classmate6.png" id="8_kaybi"]
 [ext_resource type="PackedScene" path="res://scenes/Obstacle.tscn" id="8_yhqh0"]
-[ext_resource type="Texture2D" uid="uid://b6705bipgxb5i" path="res://assets/sprites/png/book3.png" id="9_jl2pr"]
 [ext_resource type="Texture2D" uid="uid://dbjm41qi6bnt" path="res://assets/sprites/png/chair.png" id="11_7cwe4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_acx0k"]
@@ -97,14 +96,6 @@ position = Vector2(964.5, 1065)
 shape = SubResource("RectangleShape2D_ibffp")
 
 [node name="Obstacle" parent="." instance=ExtResource("8_yhqh0")]
-position = Vector2(1261, 842)
-rotation = 0.335103
-sprite = ExtResource("9_jl2pr")
-
-[node name="Obstacle2" parent="." instance=ExtResource("8_yhqh0")]
 position = Vector2(666, 589)
 rotation = -1.06989
 sprite = ExtResource("11_7cwe4")
-
-[node name="Obstacle3" parent="." instance=ExtResource("8_yhqh0")]
-position = Vector2(980, 545)
