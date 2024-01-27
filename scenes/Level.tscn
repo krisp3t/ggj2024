@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bf3mpy8vq5dxy"]
+[gd_scene load_steps=12 format=3 uid="uid://bf3mpy8vq5dxy"]
 
 [ext_resource type="Script" path="res://scenes/Level.gd" id="1_3epvc"]
 [ext_resource type="PackedScene" uid="uid://2e30utpkit20" path="res://scenes/Classroom.tscn" id="1_l6gkv"]
@@ -29,6 +29,9 @@ texture = ExtResource("2_s7acd")
 [sub_resource type="TileSet" id="TileSet_cjcqm"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_acx0k")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e6mq1"]
+size = Vector2(1919, 88)
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_3epvc")
@@ -156,6 +159,13 @@ position = Vector2(985, 929)
 [node name="Enemy" parent="Classroom" instance=ExtResource("6_f3kji")]
 position = Vector2(985, 194)
 
+[node name="GroundArea" type="Area2D" parent="Classroom"]
+monitorable = false
+
+[node name="GroundCollision" type="CollisionShape2D" parent="Classroom/GroundArea"]
+position = Vector2(964.5, 1065)
+shape = SubResource("RectangleShape2D_e6mq1")
+
 [node name="Timers" type="Node2D" parent="."]
 
 [node name="EraserTimer" type="Timer" parent="Timers"]
@@ -173,5 +183,6 @@ autostart = true
 [connection signal="pressed" from="UI/CanvasLayer/Eraser/EraserButton" to="." method="_on_eraser_button_pressed"]
 [connection signal="pressed" from="UI/CanvasLayer/Spitball/SpitballButton" to="." method="_on_spitball_button_pressed"]
 [connection signal="shot" from="Classroom/Slingshot" to="." method="_on_slingshot_shot"]
+[connection signal="body_entered" from="Classroom/GroundArea" to="." method="_on_ground_area_body_entered"]
 [connection signal="timeout" from="Timers/EraserTimer" to="." method="_on_eraser_timer_timeout"]
 [connection signal="timeout" from="Timers/SpitballTimer" to="." method="_on_spitball_timer_timeout"]

@@ -83,7 +83,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n0n6l"]
 radius = 43.0
-height = 98.0
+height = 202.0
 
 [node name="Teacher" type="RigidBody2D"]
 script = ExtResource("1_u0jje")
