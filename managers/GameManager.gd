@@ -24,7 +24,7 @@ func _process(_delta) -> void:
 		GameState.WIN:
 			pass;
 		GameState.LOSS:
-			print_debug("You lose!");
+			# print_debug("You lose!");
 			current_game_state = GameState.START;
 
 func spawn_projectile(type : ProjectileType) -> Projectile:

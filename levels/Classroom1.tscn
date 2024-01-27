@@ -60,6 +60,15 @@ physics_material_override = SubResource("PhysicsMaterial_2cvjx")
 [node name="Teacher" parent="." instance=ExtResource("4_d6n60")]
 position = Vector2(1675, 516)
 
+[node name="RayCast2D" type="RayCast2D" parent="Teacher"]
+position = Vector2(-20, -51)
+target_position = Vector2(-1587, 499)
+
+[node name="Line2D" type="Line2D" parent="Teacher"]
+position = Vector2(-20, -50)
+points = PackedVector2Array(0, 0, -1588, 498)
+default_color = Color(0.780392, 0, 0.294118, 1)
+
 [node name="Player" parent="." instance=ExtResource("5_1rwwy")]
 position = Vector2(985, 929)
 script = ExtResource("6_pjtlu")
