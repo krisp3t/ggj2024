@@ -22,19 +22,20 @@ func _process(delta):
 			return;
 		State.PULLING:
 			if Input.is_action_pressed("LMouse"):
-				var mouse_pos := get_global_mouse_position();
-				if mouse_pos.distance_to(center) > 100:
-					mouse_pos = center + (mouse_pos - center).normalized() * 100;
+				var mouse_pos := get_local_mouse_position();
+				if mouse_pos.distance_to(center) > 150:
+					mouse_pos = center + (mouse_pos - center).normalized() * 150;
+				print_debug(center, mouse_pos);
 				%LeftLine.points[1] = mouse_pos;
 				%RightLine.points[1] = mouse_pos;
 			else:
-				var location := get_global_mouse_position();
+				var location := get_local_mouse_position();
 				var distance := location.distance_to(center);
 				var velocity = center - location;
 				var projectile : Projectile = get_tree().get_nodes_in_group("Projectile")[0];
 				projectile.throw();
 				projectile.apply_impulse(Vector2(), velocity / 50 * distance);
-				state = State.THROWN;
+				state = State.IDLE; # TODO: State.THROWN
 				%LeftLine.points[1] = center;
 				%RightLine.points[1] = center;
 				

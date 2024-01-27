@@ -16,13 +16,12 @@ texture = ExtResource("2_4cf6q")
 
 [node name="LeftLine" type="Line2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(2.08165e-12, 2.08165e-12)
-points = PackedVector2Array(52, 90, 2.08165e-12, 2.08165e-12)
+points = PackedVector2Array(29, -24, 1, 71)
 
 [node name="RightLine" type="Line2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(2.08165e-12, 2.08165e-12)
-points = PackedVector2Array(-52, 90, 0, 0)
+points = PackedVector2Array(-29, -24, 2, 72)
 
 [node name="TouchArea" type="Area2D" parent="."]
 
