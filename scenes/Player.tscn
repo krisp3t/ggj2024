@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://cim0uqp76txk8"]
+
+[ext_resource type="Script" path="res://scenes/Enemy.gd" id="1_wy4yr"]
+[ext_resource type="Texture2D" uid="uid://dj1vwc5dlr865" path="res://assets/sprites/png/maincharacter.png" id="2_vygjd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_76y8r"]
+atlas = ExtResource("2_vygjd")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jo7no"]
+atlas = ExtResource("2_vygjd")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3wmwu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_76y8r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jo7no")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n0n6l"]
+radius = 43.0
+height = 98.0
+
+[node name="Player" type="RigidBody2D"]
+script = ExtResource("1_wy4yr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_3wmwu")
+animation = &"new_animation"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_n0n6l")

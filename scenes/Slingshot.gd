@@ -25,21 +25,20 @@ func _process(delta):
 				var mouse_pos := get_local_mouse_position();
 				if mouse_pos.distance_to(center) > 150:
 					mouse_pos = center + (mouse_pos - center).normalized() * 150;
-				print_debug(center, mouse_pos);
 				%LeftLine.points[1] = mouse_pos;
 				%RightLine.points[1] = mouse_pos;
 			else:
-				var location := get_local_mouse_position();
-				var distance := location.distance_to(center);
-				var velocity = center - location;
-				var projectile : Projectile = get_tree().get_nodes_in_group("Projectile")[0];
+				var location_vec := get_local_mouse_position();
+				var distance := location_vec.distance_to(center);
+				var velocity_vec = center - location_vec;
+				var projectile : RigidBody2D = get_tree().get_nodes_in_group("Projectile")[0];
 				projectile.throw();
-				projectile.apply_impulse(Vector2(), velocity / 50 * distance);
-				state = State.IDLE; # TODO: State.THROWN
+				projectile.apply_impulse(velocity_vec / 50 * distance);
 				%LeftLine.points[1] = center;
 				%RightLine.points[1] = center;
-				
+				state = State.THROWN;
 		State.THROWN:
+			state = State.IDLE;
 			return;
 		State.RESET:
 			return;
@@ -49,6 +48,5 @@ func _process(delta):
 func _on_touch_area_input_event(viewport, event, shape_idx):
 	if state == State.IDLE:
 		if (event is InputEventMouseButton && event.pressed):
-			print_debug("input event");
 			state = State.PULLING;
 			
