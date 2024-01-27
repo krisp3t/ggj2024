@@ -6,13 +6,13 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_gmdps"]
 radius = 48.28
 
-[node name="Projectile" type="RigidBody2D"]
+[node name="Projectile" type="RigidBody2D" groups=["Projectile"]]
 script = ExtResource("1_hdk22")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4, -11)
+scale = Vector2(7, 7)
+texture = ExtResource("2_sd7wg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_gmdps")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(5, -14)
-scale = Vector2(9.3125, 9.3125)
-texture = ExtResource("2_sd7wg")

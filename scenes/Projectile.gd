@@ -1,10 +1,9 @@
-extends Node2D
+extends RigidBody2D
 class_name Projectile;
 
 
 func _ready():
-	# self.set_freeze_enabled(true);
-	pass;
+	set_freeze_enabled(true);
 
 
 func _process(delta):

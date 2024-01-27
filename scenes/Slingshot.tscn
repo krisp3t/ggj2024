@@ -4,14 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://bmupp6agafa4q" path="res://assets/sprites/png/slingshot.png" id="2_4cf6q"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tbefb"]
-radius = 33.93
+radius = 53.07
 
 [node name="Slingshot" type="Node2D"]
 script = ExtResource("1_2o1ui")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 14)
-scale = Vector2(4.9375, 4.9375)
+scale = Vector2(8, 8)
 texture = ExtResource("2_4cf6q")
 
 [node name="LeftLine" type="Line2D" parent="."]
