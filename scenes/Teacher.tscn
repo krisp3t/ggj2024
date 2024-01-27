@@ -94,3 +94,23 @@ sprite_frames = SubResource("SpriteFrames_8x6p4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_n0n6l")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(1, -56)
+target_position = Vector2(-995, 756)
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(1, -56)
+points = PackedVector2Array(0, 0, -1007, 758)
+default_color = Color(0.780392, 0, 0.294118, 1)
+
+[node name="RaycastTimer" type="Timer" parent="."]
+wait_time = 0.17
+autostart = true
+
+[node name="MoveTimer" type="Timer" parent="."]
+wait_time = 0.647
+autostart = true
+
+[connection signal="timeout" from="RaycastTimer" to="." method="_on_raycast_timer_timeout"]
+[connection signal="timeout" from="MoveTimer" to="." method="_on_move_timer_timeout"]
