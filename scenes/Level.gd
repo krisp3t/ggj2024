@@ -16,6 +16,7 @@ func _process(delta):
 	%LaughProgressBar.value = game_manager.laugh_percentage;
 	if %LaughProgressBar.value <= 0:
 		game_manager.current_game_state = game_manager.GameState.LOSS;
+		%PopupTexture.visible = true;
 	
 func _on_eraser_timer_timeout():
 	if !is_projectile_loaded:
@@ -57,5 +58,5 @@ func _show_speech_bubble(text: String, time: float = 2.0):
 	tween.tween_property(%SpeechText, "visible", false, 0.01);	
 	tween.tween_property(%SpeechBubble, "position", SPEECH_START_POSITION, 0.45);
 
-	
-
+func _on_popup_button_pressed():
+	get_tree().reload_current_scene();

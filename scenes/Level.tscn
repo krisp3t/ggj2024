@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bf3mpy8vq5dxy"]
+[gd_scene load_steps=7 format=3 uid="uid://bf3mpy8vq5dxy"]
 
 [ext_resource type="Script" path="res://scenes/Level.gd" id="1_3epvc"]
 [ext_resource type="Theme" uid="uid://uy4x5o3yqavx" path="res://themes/theme.tres" id="2_a7uaf"]
 [ext_resource type="FontFile" uid="uid://dcnshewifaa33" path="res://assets/ui/HeroOfFools.ttf" id="3_m630d"]
 [ext_resource type="PackedScene" uid="uid://dn1nkxm4rr7fr" path="res://levels/Classroom1.tscn" id="4_jeht4"]
 [ext_resource type="Texture2D" uid="uid://cjww1goqxpqpq" path="res://assets/sprites/png/Speech bubble.png" id="4_w0qmc"]
+[ext_resource type="Texture2D" uid="uid://cqg05gamf26oe" path="res://assets/sprites/png/table.png" id="5_xqa1m"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_3epvc")
@@ -140,6 +141,40 @@ text = "I saw you!!!
 vertical_alignment = 1
 autowrap_mode = 2
 
+[node name="PopupTexture" type="TextureRect" parent="UI"]
+unique_name_in_owner = true
+visible = false
+z_index = 100
+layout_mode = 0
+offset_left = 652.0
+offset_top = 341.0
+offset_right = 1276.0
+offset_bottom = 1017.0
+texture = ExtResource("5_xqa1m")
+
+[node name="PopupText" type="Label" parent="UI/PopupTexture"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 104.0
+offset_right = 563.0
+offset_bottom = 203.0
+theme = ExtResource("2_a7uaf")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "You failed to entertain the class! "
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="PopupButton" type="Button" parent="UI/PopupTexture"]
+layout_mode = 0
+offset_left = 218.0
+offset_top = 237.0
+offset_right = 419.0
+offset_bottom = 301.0
+theme = ExtResource("2_a7uaf")
+theme_override_font_sizes/font_size = 42
+text = "Restart"
+
 [node name="Classroom" parent="." instance=ExtResource("4_jeht4")]
 unique_name_in_owner = true
 
@@ -159,6 +194,7 @@ autostart = true
 
 [connection signal="pressed" from="UI/CanvasLayer/Eraser/EraserButton" to="." method="_on_eraser_button_pressed"]
 [connection signal="pressed" from="UI/CanvasLayer/Spitball/SpitballButton" to="." method="_on_spitball_button_pressed"]
+[connection signal="pressed" from="UI/PopupTexture/PopupButton" to="." method="_on_popup_button_pressed"]
 [connection signal="shot" from="Classroom" to="." method="_on_slingshot_shot"]
 [connection signal="timeout" from="Timers/EraserTimer" to="." method="_on_eraser_timer_timeout"]
 [connection signal="timeout" from="Timers/SpitballTimer" to="." method="_on_spitball_timer_timeout"]
