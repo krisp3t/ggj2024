@@ -18,9 +18,15 @@ func _ready():
 func _physics_process(delta):
 	match direction:
 		Direction.LEFT:
-			move_and_collide(Vector2(-100, 0) * delta);
+			if $AnimatedSprite2D.global_position.x < 100:
+				direction = Direction.RIGHT;
+			else:
+				move_and_collide(Vector2(-100, 0) * delta);
 		Direction.RIGHT:
-			move_and_collide(Vector2(100, 0) * delta);
+			if $AnimatedSprite2D.global_position.x > 1700:
+				direction = Direction.LEFT;
+			else:
+				move_and_collide(Vector2(100, 0) * delta);
 			
 	if ($RayCast2D.is_colliding()):
 		$AmbientAudioPlayer.stop();
