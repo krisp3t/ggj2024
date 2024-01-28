@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cw0knafwhfm2"]
+
+[ext_resource type="Script" path="res://scenes/Obstacle.gd" id="1_7g0vp"]
+[ext_resource type="Texture2D" uid="uid://jydu83o4iy1f" path="res://assets/sprites/png/bag.png" id="2_ulcgp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8r3qe"]
+size = Vector2(46, 50)
+
+[node name="ObstacleBag" type="RigidBody2D"]
+script = ExtResource("1_7g0vp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("2_ulcgp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_8r3qe")

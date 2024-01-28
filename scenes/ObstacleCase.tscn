@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://vsxcwwonufpx"]
+
+[ext_resource type="Script" path="res://scenes/Obstacle.gd" id="1_whywj"]
+[ext_resource type="Texture2D" uid="uid://84v4owmwiaje" path="res://assets/sprites/png/pencilcase.png" id="2_qw10h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8r3qe"]
+size = Vector2(21, 36)
+
+[node name="ObstacleCase" type="RigidBody2D"]
+script = ExtResource("1_whywj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("2_qw10h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_8r3qe")
