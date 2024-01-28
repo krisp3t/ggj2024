@@ -1,6 +1,5 @@
-[gd_scene load_steps=39 format=3 uid="uid://cvc1vqmb0kuo0"]
+[gd_scene load_steps=35 format=3 uid="uid://cvc1vqmb0kuo0"]
 
-[ext_resource type="Texture2D" uid="uid://d01eqxjh7q5qr" path="res://assets/tilemap/png/tilemap.png" id="1_7b3np"]
 [ext_resource type="Script" path="res://levels/Classroom.gd" id="1_cglam"]
 [ext_resource type="PackedScene" uid="uid://bmuedem6qyet0" path="res://scenes/Slingshot.tscn" id="2_nt5ib"]
 [ext_resource type="PackedScene" uid="uid://va0w2xx6kel4" path="res://scenes/Projectile.tscn" id="3_s3xlv"]
@@ -18,31 +17,9 @@
 [ext_resource type="Texture2D" uid="uid://jydu83o4iy1f" path="res://assets/sprites/png/bag.png" id="16_v3i7k"]
 [ext_resource type="PackedScene" uid="uid://yam068saw54y" path="res://scenes/NPC.tscn" id="17_q6g7c"]
 [ext_resource type="Texture2D" uid="uid://cxnt10pc8vg1k" path="res://assets/sprites/png/classmate5.png" id="18_cp1uk"]
-[ext_resource type="Script" path="res://scenes/NPC.gd" id="18_y5ksq"]
 [ext_resource type="PackedScene" uid="uid://vsxcwwonufpx" path="res://scenes/ObstacleCase.tscn" id="19_pa6ud"]
 [ext_resource type="Texture2D" uid="uid://84v4owmwiaje" path="res://assets/sprites/png/pencilcase.png" id="20_m1b7y"]
 [ext_resource type="Texture2D" uid="uid://dk45ym5kba1gk" path="res://assets/sprites/png/classmate4.png" id="21_y60ua"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_acx0k"]
-texture = ExtResource("1_7b3np")
-0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:0/0 = 0
-1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:0/0/physics_layer_0/angular_velocity = 0.0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:1/0 = 0
-1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:1/0/physics_layer_0/angular_velocity = 0.0
-0:1/0 = 0
-0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:1/0/physics_layer_0/angular_velocity = 0.0
-
-[sub_resource type="TileSet" id="TileSet_id2p5"]
-physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_acx0k")
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2cvjx"]
 bounce = 0.75
@@ -142,12 +119,6 @@ animations = [{
 [node name="Classroom2" type="Node2D"]
 script = ExtResource("1_cglam")
 
-[node name="TileMap" type="TileMap" parent="."]
-scale = Vector2(4, 4)
-tile_set = SubResource("TileSet_id2p5")
-format = 2
-layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 3, 0, 0, 2, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 10, 0, 0, 9, 0, 0, 65536, 65536, 0, 131072, 65536, 0, 196608, 65536, 0, 262144, 65536, 0, 327680, 65536, 0, 393216, 0, 0, 458752, 0, 0, 524288, 0, 0, 589824, 0, 0, 655360, 0, 0, 720896, 0, 0, 786432, 0, 0, 851968, 0, 0, 917504, 0, 0, 983040, 0, 0, 1048576, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 21, 0, 0, 22, 0, 0, 23, 0, 0, 24, 0, 0, 25, 0, 0, 26, 0, 0, 27, 0, 0, 28, 0, 0, 29, 0, 0, 65565, 0, 0, 131101, 0, 0, 196637, 0, 0, 262173, 0, 0, 327709, 0, 0, 393245, 0, 0, 458781, 0, 0, 524317, 0, 0, 589853, 0, 0, 655389, 0, 0, 720925, 0, 0, 786461, 0, 0, 851997, 0, 0, 917533, 0, 0, 983069, 0, 0, 1048605, 0, 0, 1048577, 0, 0, 1048578, 0, 0, 1048579, 0, 0, 1048580, 0, 0, 1048581, 0, 0, 1048582, 0, 0, 1048583, 0, 0, 1048584, 0, 0, 1048585, 0, 0, 1048586, 0, 0, 1048587, 0, 0, 1048588, 0, 0, 1048589, 0, 0, 1048590, 0, 0, 1048591, 0, 0, 1048592, 0, 0, 1048593, 0, 0, 1048594, 0, 0, 1048595, 0, 0, 1048596, 0, 0, 1048597, 0, 0, 1048598, 0, 0, 1048599, 0, 0, 1048600, 0, 0, 1048601, 0, 0, 1048602, 0, 0, 1048603, 0, 0, 1048604, 0, 0)
-
 [node name="Slingshot" parent="." instance=ExtResource("2_nt5ib")]
 unique_name_in_owner = true
 position = Vector2(986, 797)
@@ -155,6 +126,7 @@ position = Vector2(986, 797)
 [node name="Projectile" parent="." instance=ExtResource("3_s3xlv")]
 position = Vector2(985, 769)
 physics_material_override = SubResource("PhysicsMaterial_2cvjx")
+texture_path = null
 
 [node name="Teacher" parent="." instance=ExtResource("4_d6n60")]
 position = Vector2(1007, 160)
@@ -223,7 +195,6 @@ sprite = ExtResource("16_v3i7k")
 
 [node name="NPC" parent="." instance=ExtResource("17_q6g7c")]
 position = Vector2(918, 426)
-script = ExtResource("18_y5ksq")
 sprite = SubResource("SpriteFrames_shedx")
 
 [node name="ObstacleBag2" parent="." instance=ExtResource("15_iwifu")]
