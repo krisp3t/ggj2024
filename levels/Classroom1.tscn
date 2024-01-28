@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://levels/Classroom.gd" id="1_kr0ym"]
 [ext_resource type="PackedScene" uid="uid://bmuedem6qyet0" path="res://scenes/Slingshot.tscn" id="2_nt5ib"]
-[ext_resource type="PackedScene" path="res://assets/tilemap/ClassroomTiles.tscn" id="2_rh3i0"]
+[ext_resource type="PackedScene" uid="uid://fn6n7gqrbhn5" path="res://assets/tilemap/ClassroomTiles.tscn" id="2_rh3i0"]
 [ext_resource type="TileSet" uid="uid://dqw5jbrosrljl" path="res://resources/tileset.tres" id="3_qdfgk"]
 [ext_resource type="PackedScene" uid="uid://va0w2xx6kel4" path="res://scenes/Projectile.tscn" id="3_s3xlv"]
 [ext_resource type="PackedScene" uid="uid://tj3mfref5dug" path="res://scenes/Teacher.tscn" id="4_d6n60"]
