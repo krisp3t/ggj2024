@@ -3,12 +3,17 @@ extends Node2D
 var is_projectile_loaded := true;
 const SPEECH_END_POSITION := Vector2(1551, 24);
 const SPEECH_START_POSITION := Vector2(1951, 24);
+var classroom : Node2D;
 
 func _ready():
+	var classroom_scene_path = game_manager.get_level();
+	var classroom_scene = load(classroom_scene_path);
+	classroom = classroom_scene.instantiate();
+	add_child(classroom);
+	classroom.shot.connect(_on_slingshot_shot);
 	game_manager.laugh_percentage = 50.0;
 	_show_speech_bubble("Entertain the classroom!", 5);
 	
-
 func _process(delta):
 	%EraserProgressBar.value = %EraserTimer.time_left / %EraserTimer.wait_time;
 	%SpitballProgressBar.value = %SpitballTimer.time_left / %SpitballTimer.wait_time;
@@ -17,6 +22,9 @@ func _process(delta):
 	if %LaughProgressBar.value <= 0:
 		game_manager.current_game_state = game_manager.GameState.LOSS;
 		%PopupTexture.visible = true;
+	if %LaughProgressBar.value >= 100:
+		game_manager.current_level += 1;
+		get_tree().reload_current_scene();
 	
 func _on_eraser_timer_timeout():
 	if !is_projectile_loaded:
@@ -29,16 +37,18 @@ func _on_spitball_timer_timeout():
 func _on_eraser_button_pressed():
 	%EraserButton.disabled = true;
 	%EraserTimer.start();
+	var slingshot_center = get_node("Classroom/Slingshot/SlingshotCenter");
 	var projectile : Projectile = game_manager.spawn_projectile(game_manager.ProjectileType.ERASER);
-	projectile.global_position = %Classroom/%Slingshot/%SlingshotCenter.global_position + Vector2(0, -28);
+	projectile.global_position = slingshot_center.global_position + Vector2(0, -28);
 	add_child(projectile);
 	is_projectile_loaded = true;
 
 func _on_spitball_button_pressed():
 	%SpitballButton.disabled = true;
 	%SpitballTimer.start();
+	var slingshot_center = get_node("Classroom/Slingshot/SlingshotCenter");	
 	var projectile : Projectile = game_manager.spawn_projectile(game_manager.ProjectileType.SPITBALL);
-	projectile.global_position = %Classroom/%Slingshot/%SlingshotCenter.global_position + Vector2(0, -28);
+	projectile.global_position = slingshot_center.global_position + Vector2(0, -28);
 	add_child(projectile);
 	is_projectile_loaded = true;
 	

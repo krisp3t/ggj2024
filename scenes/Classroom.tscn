@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://b4m0xrhkfvrl0"]
 
 [ext_resource type="Texture2D" uid="uid://d01eqxjh7q5qr" path="res://assets/tilemap/png/tilemap.png" id="1_4m6e8"]
-[ext_resource type="PackedScene" uid="uid://fn6n7gqrbhn5" path="res://assets/tilemap/ClassroomTiles.tscn" id="1_tq4hx"]
+[ext_resource type="PackedScene" path="res://assets/tilemap/ClassroomTiles.tscn" id="1_tq4hx"]
 [ext_resource type="Texture2D" uid="uid://dtmfdcf21cdwa" path="res://assets/tilemap/png/tilemap2.png" id="2_6ts3s"]
 [ext_resource type="PackedScene" uid="uid://tj3mfref5dug" path="res://scenes/Teacher.tscn" id="2_qssuq"]
 [ext_resource type="PackedScene" uid="uid://bmuedem6qyet0" path="res://scenes/Slingshot.tscn" id="3_b8ifs"]
@@ -652,7 +652,6 @@ position = Vector2(986, 797)
 [node name="Projectile" parent="." instance=ExtResource("4_2pm6k")]
 position = Vector2(985, 769)
 physics_material_override = SubResource("PhysicsMaterial_lph1c")
-texture_path = null
 
 [node name="Player" parent="." instance=ExtResource("5_1jk2c")]
 position = Vector2(985, 929)

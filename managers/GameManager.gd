@@ -1,5 +1,7 @@
 extends Node
 var projectile_scene := preload("res://scenes/Projectile.tscn")
+var current_level := 1;
+var classroom_scene : PackedScene;
 
 enum GameState {
 	START,
@@ -16,6 +18,12 @@ enum ProjectileType {
 var current_game_state := GameState.PLAY;
 var laugh_percentage := 50.0;
 
+func get_level() -> String:
+	match current_level:
+		1: return "res://levels/Classroom1.tscn";
+		2: return "res://levels/Classroom2.tscn";
+		_: return "";
+
 func _process(_delta) -> void:
 	match current_game_state:
 		GameState.START:
@@ -23,9 +31,8 @@ func _process(_delta) -> void:
 		GameState.PLAY:
 			pass;
 		GameState.WIN:
-			pass;
+			pass;				
 		GameState.LOSS:
-			# print_debug("You lose!");
 			current_game_state = GameState.START;
 
 func spawn_projectile(type : ProjectileType) -> Projectile:

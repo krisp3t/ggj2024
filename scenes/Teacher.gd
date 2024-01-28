@@ -1,7 +1,6 @@
 extends RigidBody2D
 @onready var game_manager = get_node("/root/GameManager");
 
-
 var direction : Direction = Direction.FORWARD;
 const RAYCAST_Y : int = 758;
 

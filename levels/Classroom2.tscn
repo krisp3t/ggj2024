@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-[gd_scene load_steps=38 format=3 uid="uid://cvc1vqmb0kuo0"]
-=======
-[gd_scene load_steps=35 format=3 uid="uid://cvc1vqmb0kuo0"]
->>>>>>> cf27c0a6ffa800b2e7e03472925c05931b03ced9
+[gd_scene load_steps=35 format=3 uid="uid://biw3khpre5fsv"]
 
 [ext_resource type="Script" path="res://levels/Classroom.gd" id="1_cglam"]
 [ext_resource type="PackedScene" uid="uid://bmuedem6qyet0" path="res://scenes/Slingshot.tscn" id="2_nt5ib"]
@@ -21,39 +17,10 @@
 [ext_resource type="Texture2D" uid="uid://jydu83o4iy1f" path="res://assets/sprites/png/bag.png" id="16_v3i7k"]
 [ext_resource type="PackedScene" uid="uid://yam068saw54y" path="res://scenes/NPC.tscn" id="17_q6g7c"]
 [ext_resource type="Texture2D" uid="uid://cxnt10pc8vg1k" path="res://assets/sprites/png/classmate5.png" id="18_cp1uk"]
-<<<<<<< HEAD
 [ext_resource type="PackedScene" path="res://scenes/ObstacleCase.tscn" id="19_pa6ud"]
 [ext_resource type="Texture2D" uid="uid://84v4owmwiaje" path="res://assets/sprites/png/pencilcase.png" id="20_m1b7y"]
 [ext_resource type="Texture2D" uid="uid://dk45ym5kba1gk" path="res://assets/sprites/png/classmate4.png" id="21_y60ua"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_acx0k"]
-texture = ExtResource("1_7b3np")
-0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:0/0 = 0
-1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:0/0/physics_layer_0/angular_velocity = 0.0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:1/0 = 0
-1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:1/0/physics_layer_0/angular_velocity = 0.0
-0:1/0 = 0
-0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:1/0/physics_layer_0/angular_velocity = 0.0
-
-[sub_resource type="TileSet" id="TileSet_id2p5"]
-physics_layer_0/collision_layer = 33
-physics_layer_0/collision_mask = 32
-sources/0 = SubResource("TileSetAtlasSource_acx0k")
-
-=======
-[ext_resource type="PackedScene" uid="uid://vsxcwwonufpx" path="res://scenes/ObstacleCase.tscn" id="19_pa6ud"]
-[ext_resource type="Texture2D" uid="uid://84v4owmwiaje" path="res://assets/sprites/png/pencilcase.png" id="20_m1b7y"]
-[ext_resource type="Texture2D" uid="uid://dk45ym5kba1gk" path="res://assets/sprites/png/classmate4.png" id="21_y60ua"]
-
->>>>>>> cf27c0a6ffa800b2e7e03472925c05931b03ced9
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2cvjx"]
 bounce = 0.75
 absorbent = true
@@ -149,7 +116,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Classroom2" type="Node2D"]
+[node name="Classroom" type="Node2D"]
 script = ExtResource("1_cglam")
 
 [node name="Slingshot" parent="." instance=ExtResource("2_nt5ib")]

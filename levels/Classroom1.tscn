@@ -3,13 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://d01eqxjh7q5qr" path="res://assets/tilemap/png/tilemap.png" id="1_7b3np"]
 [ext_resource type="Script" path="res://levels/Classroom.gd" id="1_kr0ym"]
 [ext_resource type="PackedScene" uid="uid://bmuedem6qyet0" path="res://scenes/Slingshot.tscn" id="2_nt5ib"]
-[ext_resource type="PackedScene" uid="uid://fn6n7gqrbhn5" path="res://assets/tilemap/ClassroomTiles.tscn" id="2_rh3i0"]
+[ext_resource type="PackedScene" path="res://assets/tilemap/ClassroomTiles.tscn" id="2_rh3i0"]
 [ext_resource type="PackedScene" uid="uid://va0w2xx6kel4" path="res://scenes/Projectile.tscn" id="3_s3xlv"]
 [ext_resource type="Texture2D" uid="uid://dtmfdcf21cdwa" path="res://assets/tilemap/png/tilemap2.png" id="4_1rfgn"]
 [ext_resource type="PackedScene" uid="uid://tj3mfref5dug" path="res://scenes/Teacher.tscn" id="4_d6n60"]
 [ext_resource type="PackedScene" uid="uid://cim0uqp76txk8" path="res://scenes/Player.tscn" id="5_1rwwy"]
 [ext_resource type="Script" path="res://scenes/Player.gd" id="6_pjtlu"]
-[ext_resource type="PackedScene" uid="uid://bxgdjmmkcuxcf" path="res://scenes/Enemy.tscn" id="7_3ie0d"]
+[ext_resource type="PackedScene" uid="uid://c4kpq2pm26shs" path="res://scenes/Enemy.tscn" id="7_3ie0d"]
 [ext_resource type="PackedScene" uid="uid://bv40xhqo52p3o" path="res://scenes/Obstacle.tscn" id="8_yhqh0"]
 [ext_resource type="Texture2D" uid="uid://b6705bipgxb5i" path="res://assets/sprites/png/book3.png" id="9_jl2pr"]
 [ext_resource type="Texture2D" uid="uid://0voljsmfe2v8" path="res://assets/sprites/png/book2.png" id="10_5tngh"]
@@ -649,7 +649,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Classroom1" type="Node2D"]
+[node name="Classroom" type="Node2D"]
 script = ExtResource("1_kr0ym")
 
 [node name="TileMap2" parent="." instance=ExtResource("2_rh3i0")]
