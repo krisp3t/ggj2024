@@ -30,6 +30,7 @@ radius = 32.0
 height = 124.0
 
 [node name="NPC" type="RigidBody2D"]
+collision_layer = 32
 script = ExtResource("1_6oxvo")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

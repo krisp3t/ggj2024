@@ -1,11 +1,11 @@
 extends Node2D
 @onready var game_manager = get_node("/root/GameManager");
 var is_projectile_loaded := true;
-const SPEECH_END_POSITION := Vector2(1551, 10);
-const SPEECH_START_POSITION := Vector2(1951, 10);
+const SPEECH_END_POSITION := Vector2(1551, 24);
+const SPEECH_START_POSITION := Vector2(1951, 24);
 
 func _ready():
-	%LaughProgressBar.value = game_manager.laugh_percentage;
+	game_manager.laugh_percentage = 50.0;
 	_show_speech_bubble("Entertain the classroom!", 5);
 	
 

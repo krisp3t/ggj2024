@@ -1,7 +1,66 @@
-[gd_scene load_steps=7 format=3 uid="uid://c4kpq2pm26shs"]
+[gd_scene load_steps=67 format=3 uid="uid://c4kpq2pm26shs"]
 
 [ext_resource type="Script" path="res://scenes/Enemy.gd" id="1_wy4yr"]
 [ext_resource type="Texture2D" uid="uid://dk64633ryne35" path="res://assets/sprites/png/classmate2.png" id="2_qkln5"]
+[ext_resource type="Texture2D" uid="uid://cvlup1mfeqse" path="res://assets/ui/Red Arrow 3/File1.png" id="3_2whun"]
+[ext_resource type="Texture2D" uid="uid://ddmv7vy6leh6q" path="res://assets/ui/Red Arrow 3/File2.png" id="4_5wsr8"]
+[ext_resource type="Texture2D" uid="uid://uyas3yq8gq1u" path="res://assets/ui/Red Arrow 3/File3.png" id="5_42s0o"]
+[ext_resource type="Texture2D" uid="uid://dkxb77mm441ch" path="res://assets/ui/Red Arrow 3/File4.png" id="6_ndedx"]
+[ext_resource type="Texture2D" uid="uid://spfxnyobtv5d" path="res://assets/ui/Red Arrow 3/File5.png" id="7_4b632"]
+[ext_resource type="Texture2D" uid="uid://bs1apxt32j1x1" path="res://assets/ui/Red Arrow 3/File6.png" id="8_nlllk"]
+[ext_resource type="Texture2D" uid="uid://carmsvcuqd38h" path="res://assets/ui/Red Arrow 3/File7.png" id="9_gqajx"]
+[ext_resource type="Texture2D" uid="uid://dreioekb18vvp" path="res://assets/ui/Red Arrow 3/File8.png" id="10_361o6"]
+[ext_resource type="Texture2D" uid="uid://0440rqeugvsb" path="res://assets/ui/Red Arrow 3/File9.png" id="11_8i0xs"]
+[ext_resource type="Texture2D" uid="uid://ch060mp343qr6" path="res://assets/ui/Red Arrow 3/File10.png" id="12_tsncp"]
+[ext_resource type="Texture2D" uid="uid://5ebr4mvq5s2i" path="res://assets/ui/Red Arrow 3/File11.png" id="13_37r8e"]
+[ext_resource type="Texture2D" uid="uid://bvd2ci0xpoh2h" path="res://assets/ui/Red Arrow 3/File12.png" id="14_0a51h"]
+[ext_resource type="Texture2D" uid="uid://mcyallpxmsvh" path="res://assets/ui/Red Arrow 3/File13.png" id="15_u5hiy"]
+[ext_resource type="Texture2D" uid="uid://07xmkjc07prv" path="res://assets/ui/Red Arrow 3/File14.png" id="16_ohbcy"]
+[ext_resource type="Texture2D" uid="uid://cpx8uccg2ipy5" path="res://assets/ui/Red Arrow 3/File15.png" id="17_84wo7"]
+[ext_resource type="Texture2D" uid="uid://c13cata86x8u" path="res://assets/ui/Red Arrow 3/File16.png" id="18_ldux1"]
+[ext_resource type="Texture2D" uid="uid://cm0k73gbhrdf8" path="res://assets/ui/Red Arrow 3/File17.png" id="19_heffi"]
+[ext_resource type="Texture2D" uid="uid://b85hmagyketne" path="res://assets/ui/Red Arrow 3/File18.png" id="20_35yu0"]
+[ext_resource type="Texture2D" uid="uid://dv2gt5qxs7u6h" path="res://assets/ui/Red Arrow 3/File19.png" id="21_mr6qp"]
+[ext_resource type="Texture2D" uid="uid://6sopsq5f0a5r" path="res://assets/ui/Red Arrow 3/File20.png" id="22_exaci"]
+[ext_resource type="Texture2D" uid="uid://db71yqpkdn7ce" path="res://assets/ui/Red Arrow 3/File21.png" id="23_03tus"]
+[ext_resource type="Texture2D" uid="uid://h3peflsnjh2n" path="res://assets/ui/Red Arrow 3/File22.png" id="24_3pnps"]
+[ext_resource type="Texture2D" uid="uid://cahseb15qwv11" path="res://assets/ui/Red Arrow 3/File23.png" id="25_8v1gj"]
+[ext_resource type="Texture2D" uid="uid://d07qkepnvq7kh" path="res://assets/ui/Red Arrow 3/File24.png" id="26_q87vj"]
+[ext_resource type="Texture2D" uid="uid://dlf0tww03o7cj" path="res://assets/ui/Red Arrow 3/File25.png" id="27_i8awr"]
+[ext_resource type="Texture2D" uid="uid://bxq6wjlifacwv" path="res://assets/ui/Red Arrow 3/File26.png" id="28_r4yqm"]
+[ext_resource type="Texture2D" uid="uid://d2wauyde7siqe" path="res://assets/ui/Red Arrow 3/File27.png" id="29_mlmnf"]
+[ext_resource type="Texture2D" uid="uid://btjw3yref4fk1" path="res://assets/ui/Red Arrow 3/File28.png" id="30_qhwr6"]
+[ext_resource type="Texture2D" uid="uid://cjhnxv3q2kwwt" path="res://assets/ui/Red Arrow 3/File29.png" id="31_feard"]
+[ext_resource type="Texture2D" uid="uid://cbqasic7okgtu" path="res://assets/ui/Red Arrow 3/File30.png" id="32_ctguw"]
+[ext_resource type="Texture2D" uid="uid://dv2p610mgfkc0" path="res://assets/ui/Red Arrow 3/File31.png" id="33_y3u0w"]
+[ext_resource type="Texture2D" uid="uid://bsh5wpe6tqipg" path="res://assets/ui/Red Arrow 3/File32.png" id="34_fr4wc"]
+[ext_resource type="Texture2D" uid="uid://ba4qt7djb800r" path="res://assets/ui/Red Arrow 3/File33.png" id="35_3hfuq"]
+[ext_resource type="Texture2D" uid="uid://bmlwowvavt7e7" path="res://assets/ui/Red Arrow 3/File34.png" id="36_w72w6"]
+[ext_resource type="Texture2D" uid="uid://b07ct4gti8xl1" path="res://assets/ui/Red Arrow 3/File35.png" id="37_uwus3"]
+[ext_resource type="Texture2D" uid="uid://djyf88yax0low" path="res://assets/ui/Red Arrow 3/File36.png" id="38_wnbl6"]
+[ext_resource type="Texture2D" uid="uid://djhgl7uwq8cp2" path="res://assets/ui/Red Arrow 3/File37.png" id="39_i6rb2"]
+[ext_resource type="Texture2D" uid="uid://uk4jxcrmcbi3" path="res://assets/ui/Red Arrow 3/File38.png" id="40_b3tnq"]
+[ext_resource type="Texture2D" uid="uid://cutmucat7vlsh" path="res://assets/ui/Red Arrow 3/File39.png" id="41_mo4mx"]
+[ext_resource type="Texture2D" uid="uid://c3mrjauobawws" path="res://assets/ui/Red Arrow 3/File40.png" id="42_itggx"]
+[ext_resource type="Texture2D" uid="uid://grcvj8jg501r" path="res://assets/ui/Red Arrow 3/File41.png" id="43_qnbgy"]
+[ext_resource type="Texture2D" uid="uid://drvgu5q6714op" path="res://assets/ui/Red Arrow 3/File42.png" id="44_vmo5b"]
+[ext_resource type="Texture2D" uid="uid://ddawyol15ims" path="res://assets/ui/Red Arrow 3/File43.png" id="45_bqhw7"]
+[ext_resource type="Texture2D" uid="uid://yn2va4glgd6j" path="res://assets/ui/Red Arrow 3/File44.png" id="46_4m1sg"]
+[ext_resource type="Texture2D" uid="uid://bja1xlkw1apum" path="res://assets/ui/Red Arrow 3/File45.png" id="47_jhmxq"]
+[ext_resource type="Texture2D" uid="uid://b7l4yeaawrdtd" path="res://assets/ui/Red Arrow 3/File46.png" id="48_vx67a"]
+[ext_resource type="Texture2D" uid="uid://bs545gpsmq0mb" path="res://assets/ui/Red Arrow 3/File47.png" id="49_60phq"]
+[ext_resource type="Texture2D" uid="uid://b5hj2ycxfqiq8" path="res://assets/ui/Red Arrow 3/File48.png" id="50_ha5pp"]
+[ext_resource type="Texture2D" uid="uid://b5qleddm4oc7d" path="res://assets/ui/Red Arrow 3/File49.png" id="51_qxo7p"]
+[ext_resource type="Texture2D" uid="uid://cutuga2hjpetu" path="res://assets/ui/Red Arrow 3/File50.png" id="52_0oe55"]
+[ext_resource type="Texture2D" uid="uid://d3mk3r8rcpyou" path="res://assets/ui/Red Arrow 3/File51.png" id="53_1k8ao"]
+[ext_resource type="Texture2D" uid="uid://bbd1y4nx5uwlr" path="res://assets/ui/Red Arrow 3/File52.png" id="54_juo1b"]
+[ext_resource type="Texture2D" uid="uid://dldx0neoyt8t5" path="res://assets/ui/Red Arrow 3/File53.png" id="55_t5vwk"]
+[ext_resource type="Texture2D" uid="uid://bdgidkq4rpvqs" path="res://assets/ui/Red Arrow 3/File54.png" id="56_6xg64"]
+[ext_resource type="Texture2D" uid="uid://bqxnoem67dxw1" path="res://assets/ui/Red Arrow 3/File55.png" id="57_p6ffx"]
+[ext_resource type="Texture2D" uid="uid://ddnqhm2vomdb2" path="res://assets/ui/Red Arrow 3/File56.png" id="58_022e4"]
+[ext_resource type="Texture2D" uid="uid://bakfa4vko52js" path="res://assets/ui/Red Arrow 3/File57.png" id="59_kpqxi"]
+[ext_resource type="Texture2D" uid="uid://bsjjmrwy5y8uy" path="res://assets/ui/Red Arrow 3/File58.png" id="60_lbts0"]
+[ext_resource type="Texture2D" uid="uid://do2fm83napgw" path="res://assets/ui/Red Arrow 3/File59.png" id="61_hj12f"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4wibf"]
 atlas = ExtResource("2_qkln5")
@@ -29,6 +88,191 @@ animations = [{
 radius = 43.0
 height = 98.0
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_jhwmt"]
+animations = [{
+"frames": [{
+"duration": 0.41,
+"texture": ExtResource("3_2whun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5wsr8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_42s0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ndedx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4b632")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nlllk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_gqajx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_361o6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8i0xs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_tsncp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_37r8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_0a51h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_u5hiy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ohbcy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_84wo7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ldux1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_heffi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_35yu0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_mr6qp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_exaci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_03tus")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_3pnps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_8v1gj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_q87vj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_i8awr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_r4yqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_mlmnf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_qhwr6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_feard")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_ctguw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_y3u0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_fr4wc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_3hfuq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_w72w6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_uwus3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_wnbl6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_i6rb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_b3tnq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_mo4mx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_itggx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_qnbgy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_vmo5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_bqhw7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_4m1sg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_jhmxq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_vx67a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_60phq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_ha5pp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_qxo7p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_0oe55")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_1k8ao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_juo1b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_t5vwk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_6xg64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_p6ffx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_022e4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_kpqxi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_lbts0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_hj12f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 60.0
+}]
+
 [node name="Enemy" type="RigidBody2D"]
 collision_layer = 33
 collision_mask = 32
@@ -42,5 +286,11 @@ sprite_frames = SubResource("SpriteFrames_pvevq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_n0n6l")
+
+[node name="Marker" type="AnimatedSprite2D" parent="."]
+position = Vector2(0.999998, -139)
+scale = Vector2(0.393333, 0.253333)
+sprite_frames = SubResource("SpriteFrames_jhwmt")
+frame_progress = 0.810499
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
