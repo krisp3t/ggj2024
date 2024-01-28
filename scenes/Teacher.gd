@@ -23,6 +23,7 @@ func _physics_process(delta):
 			move_and_collide(Vector2(100, 0) * delta);
 			
 	if ($RayCast2D.is_colliding()):
+		$AmbientAudioPlayer.stop();
 		$DetectedAudioPlayer.play();
 		$RayCast2D.enabled = false;
 		game_manager.laugh_percentage -= 10.0;

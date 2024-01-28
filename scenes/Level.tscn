@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bf3mpy8vq5dxy"]
+[gd_scene load_steps=7 format=3 uid="uid://bf3mpy8vq5dxy"]
 
 [ext_resource type="Script" path="res://scenes/Level.gd" id="1_3epvc"]
 [ext_resource type="Theme" uid="uid://uy4x5o3yqavx" path="res://themes/theme.tres" id="2_a7uaf"]
 [ext_resource type="FontFile" uid="uid://dcnshewifaa33" path="res://assets/ui/HeroOfFools.ttf" id="3_m630d"]
 [ext_resource type="Texture2D" uid="uid://opyskdgdi8e1" path="res://assets/speech/bubble.png" id="4_5lvm5"]
 [ext_resource type="Texture2D" uid="uid://cqg05gamf26oe" path="res://assets/sprites/png/table.png" id="5_xqa1m"]
+[ext_resource type="AudioStream" uid="uid://cv3ama1aygmit" path="res://assets/sounds/bell.mp3" id="6_w1m75"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_3epvc")
@@ -187,6 +188,10 @@ unique_name_in_owner = true
 wait_time = 5.0
 one_shot = true
 autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_w1m75")
+autoplay = true
 
 [connection signal="pressed" from="UI/CanvasLayer/Eraser/EraserButton" to="." method="_on_eraser_button_pressed"]
 [connection signal="pressed" from="UI/CanvasLayer/Spitball/SpitballButton" to="." method="_on_spitball_button_pressed"]
