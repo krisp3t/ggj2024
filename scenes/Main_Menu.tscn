@@ -1,0 +1,78 @@
+[gd_scene load_steps=6 format=3 uid="uid://dxjqrhm2l3pgu"]
+
+[ext_resource type="Texture2D" uid="uid://giwj8wwhc4g1" path="res://assets/img/splash.png" id="1_fcvfy"]
+[ext_resource type="Script" path="res://scenes/Main_Menu.gd" id="1_tpcf3"]
+[ext_resource type="Theme" uid="uid://uy4x5o3yqavx" path="res://themes/theme.tres" id="2_kmtyb"]
+
+[sub_resource type="Gradient" id="Gradient_swuyb"]
+offsets = PackedFloat32Array(0.00235294, 1)
+colors = PackedColorArray(0.74902, 0.478431, 0.705882, 1, 0.74902, 0.478431, 0.705882, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_l5i00"]
+gradient = SubResource("Gradient_swuyb")
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tpcf3")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/ParallaxBackground"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_fcvfy")
+
+[node name="PlayButton" type="Button" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_left = 671.0
+offset_top = 553.0
+offset_right = 1276.0
+offset_bottom = 696.0
+theme = ExtResource("2_kmtyb")
+theme_override_font_sizes/font_size = 128
+text = "Play!"
+
+[node name="DescriptionLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = -251.0
+offset_top = 902.0
+offset_right = 1422.0
+offset_bottom = 1039.0
+theme = ExtResource("2_kmtyb")
+theme_override_font_sizes/font_size = 64
+text = "Cause mayhem!
+Make classmates burst into laughter!"
+horizontal_alignment = 1
+
+[node name="CreditsBackground" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1519.0
+offset_right = 1919.0
+offset_bottom = 342.0
+texture = SubResource("GradientTexture1D_l5i00")
+
+[node name="CreditsLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1519.0
+offset_right = 1919.0
+offset_bottom = 381.0
+theme = ExtResource("2_kmtyb")
+theme_override_font_sizes/font_size = 42
+text = "Game built for Global Game Jam 2024.
+Credits:
+@krisp3t
+@NebulaeOfnir
+@AQUAGON
+@shwumii
+ "
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[connection signal="pressed" from="CanvasLayer/PlayButton" to="." method="_on_play_button_pressed"]
