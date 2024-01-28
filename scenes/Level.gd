@@ -1,14 +1,15 @@
 extends Node2D
-@onready var game_manager = get_node("/root/GameManager")
+@onready var game_manager = get_node("/root/GameManager");
 var is_projectile_loaded := true;
 
 func _ready():
-	%LaughProgressBar.value = 50.0;
+	%LaughProgressBar.value = game_manager.laugh_percentage;
 
 func _process(delta):
 	%EraserProgressBar.value = %EraserTimer.time_left / %EraserTimer.wait_time;
 	%SpitballProgressBar.value = %SpitballTimer.time_left / %SpitballTimer.wait_time;
-	%LaughProgressBar.value -= 0.9 * delta;
+	game_manager.laugh_percentage -= 0.9 * delta;
+	%LaughProgressBar.value = game_manager.laugh_percentage;
 	if %LaughProgressBar.value <= 0:
 		game_manager.current_game_state = game_manager.GameState.LOSS;
 	

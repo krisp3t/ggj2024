@@ -14,6 +14,7 @@ enum ProjectileType {
 }
 
 var current_game_state := GameState.PLAY;
+var laugh_percentage := 50.0;
 
 func _process(_delta) -> void:
 	match current_game_state:
@@ -31,7 +32,7 @@ func spawn_projectile(type : ProjectileType) -> Projectile:
 	var texture : String;
 	match type:
 		ProjectileType.ERASER:
-			texture = "res://assets/sprites/png/raser.png";
+			texture = "res://assets/sprites/png/eraser.png";
 		ProjectileType.SPITBALL:
 			texture = "res://assets/sprites/png/spitball.png";
 	var projectile := projectile_scene.instantiate();

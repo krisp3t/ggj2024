@@ -1,4 +1,7 @@
 extends RigidBody2D
+@onready var game_manager = get_node("/root/GameManager");
+
+
 var direction : Direction = Direction.FORWARD;
 const RAYCAST_Y : int = 758;
 
@@ -21,7 +24,10 @@ func _physics_process(delta):
 			move_and_collide(Vector2(100, 0) * delta);
 			
 	if ($RayCast2D.is_colliding()):
-		print_debug("collide raycast");
+		$RayCast2D.enabled = false;
+		game_manager.laugh_percentage -= 10.0;
+		await get_tree().create_timer(0.5).timeout;
+		$RayCast2D.enabled = true;
 
 func _on_raycast_timer_timeout():
 	var pos : Vector2;
