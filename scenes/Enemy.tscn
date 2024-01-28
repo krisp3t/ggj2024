@@ -291,6 +291,6 @@ shape = SubResource("CapsuleShape2D_n0n6l")
 position = Vector2(0.999998, -139)
 scale = Vector2(0.393333, 0.253333)
 sprite_frames = SubResource("SpriteFrames_jhwmt")
-frame_progress = 0.810499
+frame_progress = 0.244821
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
