@@ -1,6 +1,7 @@
-[gd_scene load_steps=18 format=3 uid="uid://cvc1vqmb0kuo0"]
+[gd_scene load_steps=22 format=3 uid="uid://cvc1vqmb0kuo0"]
 
 [ext_resource type="Texture2D" uid="uid://d01eqxjh7q5qr" path="res://assets/tilemap/png/tilemap.png" id="1_7b3np"]
+[ext_resource type="Script" path="res://levels/Classroom.gd" id="1_cglam"]
 [ext_resource type="PackedScene" uid="uid://bmuedem6qyet0" path="res://scenes/Slingshot.tscn" id="2_nt5ib"]
 [ext_resource type="PackedScene" uid="uid://va0w2xx6kel4" path="res://scenes/Projectile.tscn" id="3_s3xlv"]
 [ext_resource type="PackedScene" uid="uid://tj3mfref5dug" path="res://scenes/Teacher.tscn" id="4_d6n60"]
@@ -9,7 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://bxgdjmmkcuxcf" path="res://scenes/Enemy.tscn" id="7_3ie0d"]
 [ext_resource type="Texture2D" uid="uid://dy0umnvwsjsl4" path="res://assets/sprites/png/classmate6.png" id="8_kaybi"]
 [ext_resource type="PackedScene" uid="uid://djdiidob2dv76" path="res://scenes/Obstacle.tscn" id="8_yhqh0"]
-[ext_resource type="Texture2D" uid="uid://dbjm41qi6bnt" path="res://assets/sprites/png/chair.png" id="11_7cwe4"]
+[ext_resource type="PackedScene" uid="uid://hmrlxi85856j" path="res://scenes/Table.tscn" id="10_bcbsp"]
+[ext_resource type="PackedScene" uid="uid://bwewnoa1wl6bq" path="res://scenes/Chair.tscn" id="11_n2tb2"]
+[ext_resource type="Texture2D" uid="uid://0voljsmfe2v8" path="res://assets/sprites/png/book2.png" id="13_qpgmu"]
+[ext_resource type="Texture2D" uid="uid://b6705bipgxb5i" path="res://assets/sprites/png/book3.png" id="14_rgodv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_acx0k"]
 texture = ExtResource("1_7b3np")
@@ -61,7 +65,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ibffp"]
 size = Vector2(1919, 88)
 
-[node name="Classroom1" type="Node2D"]
+[node name="Classroom2" type="Node2D"]
+script = ExtResource("1_cglam")
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(4, 4)
@@ -78,14 +83,14 @@ position = Vector2(985, 769)
 physics_material_override = SubResource("PhysicsMaterial_2cvjx")
 
 [node name="Teacher" parent="." instance=ExtResource("4_d6n60")]
-position = Vector2(1675, 516)
+position = Vector2(1007, 160)
 
 [node name="Player" parent="." instance=ExtResource("5_1rwwy")]
 position = Vector2(985, 929)
 script = ExtResource("6_pjtlu")
 
 [node name="Enemy" parent="." instance=ExtResource("7_3ie0d")]
-position = Vector2(985, 194)
+position = Vector2(359, 446)
 sprite = SubResource("SpriteFrames_nvtp6")
 
 [node name="GroundArea" type="Area2D" parent="."]
@@ -95,7 +100,43 @@ monitorable = false
 position = Vector2(964.5, 1065)
 shape = SubResource("RectangleShape2D_ibffp")
 
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Table2" parent="Node2D" instance=ExtResource("10_bcbsp")]
+position = Vector2(633, 396)
+
+[node name="Table3" parent="Node2D" instance=ExtResource("10_bcbsp")]
+position = Vector2(919, 396)
+
+[node name="Table" parent="Node2D" instance=ExtResource("10_bcbsp")]
+position = Vector2(358, 398)
+
+[node name="Table4" parent="Node2D" instance=ExtResource("10_bcbsp")]
+position = Vector2(981, 883)
+
+[node name="Table5" parent="Node2D" instance=ExtResource("10_bcbsp")]
+position = Vector2(1212, 396)
+
+[node name="Table6" parent="Node2D" instance=ExtResource("10_bcbsp")]
+position = Vector2(502, 628)
+
+[node name="Table7" parent="Node2D" instance=ExtResource("10_bcbsp")]
+position = Vector2(808, 626)
+
+[node name="Table8" parent="Node2D" instance=ExtResource("10_bcbsp")]
+position = Vector2(1093, 626)
+
+[node name="Chair" parent="Node2D" instance=ExtResource("11_n2tb2")]
+position = Vector2(632, 448)
+
 [node name="Obstacle" parent="." instance=ExtResource("8_yhqh0")]
-position = Vector2(666, 589)
-rotation = -1.06989
-sprite = ExtResource("11_7cwe4")
+position = Vector2(464, 606)
+rotation = 0.785398
+sprite = ExtResource("13_qpgmu")
+
+[node name="Obstacle2" parent="." instance=ExtResource("8_yhqh0")]
+position = Vector2(550, 563)
+rotation = 0.785398
+sprite = ExtResource("14_rgodv")
+
+[connection signal="shot" from="Slingshot" to="." method="_on_slingshot_shot"]
