@@ -12,13 +12,16 @@ func _ready():
 	set_freeze_enabled(true);
 	$AnimatedSprite2D.play("forward");
 
-func _process(delta):
+			
+func _physics_process(delta):
 	match direction:
 		Direction.LEFT:
-			print_debug(position);
-			position.x -= 100 * delta;
+			move_and_collide(Vector2(-100, 0) * delta);
 		Direction.RIGHT:
-			position.x += 100 * delta;
+			move_and_collide(Vector2(100, 0) * delta);
+			
+	if ($RayCast2D.is_colliding()):
+		print_debug("collide raycast");
 
 func _on_raycast_timer_timeout():
 	var pos : Vector2;
@@ -36,13 +39,13 @@ func _on_raycast_timer_timeout():
 func _on_move_timer_timeout():
 	var i := randi_range(0, 10);
 	match i:
-		0,1,2,3,4,5,6,7,8: 
+		0,1,2,3,4,5,6: 
 			direction = Direction.FORWARD;
 			$AnimatedSprite2D.play("forward");
-		9:
+		7,8:
 			direction = Direction.LEFT;
 			$AnimatedSprite2D.play("left");
-		10:
+		9,10:
 			direction = Direction.RIGHT;
 			$AnimatedSprite2D.play("right");
 	

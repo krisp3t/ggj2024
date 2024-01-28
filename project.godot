@@ -10,9 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Rabble Rouser"
+config/name="Class Clown"
 run/main_scene="res://scenes/Level.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
+boot_splash/image="res://assets/img/splash.png"
 config/icon="res://icon.svg"
 
 [autoload]
