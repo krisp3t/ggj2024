@@ -13,7 +13,7 @@ func _process(delta):
 
 func throw():
 	set_freeze_enabled(false);
-	collision_layer = 0b00000000_00000000_00000000_10000001;
+	collision_layer = 0b00000000_00000000_00000000_10100001;
 	remove_from_group("SelectedProjectile");
 	
 func _on_visible_on_screen_notifier_2d_screen_exited():
