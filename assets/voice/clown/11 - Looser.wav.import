@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bf004n3epo6xi"
+path="res://.godot/imported/11 - Looser.wav-607f873e45c7e4c7c0ea33065f8956b8.sample"
+
+[deps]
+
+source_file="res://assets/voice/clown/11 - Looser.wav"
+dest_files=["res://.godot/imported/11 - Looser.wav-607f873e45c7e4c7c0ea33065f8956b8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

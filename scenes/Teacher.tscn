@@ -1,7 +1,21 @@
-[gd_scene load_steps=15 format=3 uid="uid://tj3mfref5dug"]
+[gd_scene load_steps=31 format=3 uid="uid://tj3mfref5dug"]
 
 [ext_resource type="Script" path="res://scenes/Teacher.gd" id="1_u0jje"]
 [ext_resource type="Texture2D" uid="uid://bvmcn6gg6g7cy" path="res://assets/sprites/png/teacher1.png" id="2_6y360"]
+[ext_resource type="AudioStream" uid="uid://cyh50ffp4na6j" path="res://assets/voice/teacher/detected/4) Final Straw.wav" id="3_5e1mo"]
+[ext_resource type="AudioStream" uid="uid://b1qifp82bt0t1" path="res://assets/voice/teacher/detected/5) Foul Mouth Junior.wav" id="4_jynlo"]
+[ext_resource type="AudioStream" uid="uid://iny4cb1u8vqy" path="res://assets/voice/teacher/detected/6) Stop it.wav" id="5_upvfa"]
+[ext_resource type="AudioStream" uid="uid://u64hdcqwg8mi" path="res://assets/voice/teacher/detected/7) Stop encouraging.wav" id="6_t77vc"]
+[ext_resource type="AudioStream" uid="uid://vi003rl283ew" path="res://assets/voice/teacher/detected/8) Principal's office.wav" id="7_o5g6s"]
+[ext_resource type="AudioStream" uid="uid://66n82tlvrtqb" path="res://assets/voice/teacher/detected/10) Timmy Principals Office.wav" id="8_3c1rv"]
+[ext_resource type="AudioStream" uid="uid://div7upftdr2ag" path="res://assets/voice/teacher/detected/12 - uh oh I'm in trouble.wav" id="9_r7lg2"]
+[ext_resource type="AudioStream" uid="uid://dprf4qdl4o67r" path="res://assets/voice/teacher/detected/12) Sit down.wav" id="10_fhyku"]
+[ext_resource type="AudioStream" uid="uid://higfj6i4oppb" path="res://assets/voice/teacher/detected/14) Give me that.wav" id="11_e41uo"]
+[ext_resource type="AudioStream" uid="uid://dw0gaclcym7d6" path="res://assets/voice/teacher/ambient/1) Wasting Time.wav" id="12_rsq7j"]
+[ext_resource type="AudioStream" uid="uid://t7u3qocxh865" path="res://assets/voice/teacher/ambient/2) The Bell.wav" id="13_uaban"]
+[ext_resource type="AudioStream" uid="uid://dhjhle0e8eacs" path="res://assets/voice/teacher/ambient/3) Inside voices.wav" id="14_f3kqd"]
+[ext_resource type="AudioStream" uid="uid://b1rtb7ynearmi" path="res://assets/voice/teacher/ambient/11) Put up with this job.wav" id="15_qooav"]
+[ext_resource type="AudioStream" uid="uid://6x4nplwgb7an" path="res://assets/voice/teacher/ambient/13) Quiet.wav" id="16_oonfl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yofsh"]
 atlas = ExtResource("2_6y360")
@@ -95,6 +109,40 @@ animations = [{
 radius = 43.0
 height = 202.0
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ii0t3"]
+streams_count = 9
+stream_0/stream = ExtResource("3_5e1mo")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("4_jynlo")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("5_upvfa")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("6_t77vc")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("7_o5g6s")
+stream_4/weight = 1.0
+stream_5/stream = ExtResource("8_3c1rv")
+stream_5/weight = 1.0
+stream_6/stream = ExtResource("9_r7lg2")
+stream_6/weight = 1.0
+stream_7/stream = ExtResource("10_fhyku")
+stream_7/weight = 1.0
+stream_8/stream = ExtResource("11_e41uo")
+stream_8/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_6vh80"]
+streams_count = 5
+stream_0/stream = ExtResource("12_rsq7j")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("13_uaban")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("14_f3kqd")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("15_qooav")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("16_oonfl")
+stream_4/weight = 1.0
+
 [node name="Teacher" type="RigidBody2D"]
 script = ExtResource("1_u0jje")
 
@@ -125,5 +173,18 @@ autostart = true
 wait_time = 1.177
 autostart = true
 
+[node name="AmbientTimer" type="Timer" parent="."]
+wait_time = 7.477
+autostart = true
+
+[node name="DetectedAudioPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamRandomizer_ii0t3")
+
+[node name="AmbientAudioPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamRandomizer_6vh80")
+
 [connection signal="timeout" from="RaycastTimer" to="." method="_on_raycast_timer_timeout"]
 [connection signal="timeout" from="MoveTimer" to="." method="_on_move_timer_timeout"]
+[connection signal="timeout" from="AmbientTimer" to="." method="_on_ambient_timer_timeout"]

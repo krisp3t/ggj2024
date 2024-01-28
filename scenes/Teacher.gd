@@ -23,6 +23,7 @@ func _physics_process(delta):
 			move_and_collide(Vector2(100, 0) * delta);
 			
 	if ($RayCast2D.is_colliding()):
+		$DetectedAudioPlayer.play();
 		$RayCast2D.enabled = false;
 		game_manager.laugh_percentage -= 10.0;
 		await get_tree().create_timer(0.5).timeout;
@@ -54,3 +55,7 @@ func _on_move_timer_timeout():
 			direction = Direction.RIGHT;
 			$AnimatedSprite2D.play("right");
 	
+
+
+func _on_ambient_timer_timeout():
+	$AmbientAudioPlayer.play();

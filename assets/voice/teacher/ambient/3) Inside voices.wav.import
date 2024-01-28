@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dhjhle0e8eacs"
+path="res://.godot/imported/3) Inside voices.wav-98af4691b360ba58dfb89fa6ed7f88fd.sample"
+
+[deps]
+
+source_file="res://assets/voice/teacher/ambient/3) Inside voices.wav"
+dest_files=["res://.godot/imported/3) Inside voices.wav-98af4691b360ba58dfb89fa6ed7f88fd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

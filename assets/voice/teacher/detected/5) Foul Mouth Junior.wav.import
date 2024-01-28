@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b1qifp82bt0t1"
+path="res://.godot/imported/5) Foul Mouth Junior.wav-11bf7d4675d17a06395bcf4bbfb1a57c.sample"
+
+[deps]
+
+source_file="res://assets/voice/teacher/detected/5) Foul Mouth Junior.wav"
+dest_files=["res://.godot/imported/5) Foul Mouth Junior.wav-11bf7d4675d17a06395bcf4bbfb1a57c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

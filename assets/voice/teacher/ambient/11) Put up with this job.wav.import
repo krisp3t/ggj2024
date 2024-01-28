@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b1rtb7ynearmi"
+path="res://.godot/imported/11) Put up with this job.wav-fed0289c966c8c5b62bd48f15a54693e.sample"
+
+[deps]
+
+source_file="res://assets/voice/teacher/ambient/11) Put up with this job.wav"
+dest_files=["res://.godot/imported/11) Put up with this job.wav-fed0289c966c8c5b62bd48f15a54693e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

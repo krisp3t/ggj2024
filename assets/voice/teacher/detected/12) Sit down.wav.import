@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dprf4qdl4o67r"
+path="res://.godot/imported/12) Sit down.wav-5a681fec689543c364443eb4f8ef2c1c.sample"
+
+[deps]
+
+source_file="res://assets/voice/teacher/detected/12) Sit down.wav"
+dest_files=["res://.godot/imported/12) Sit down.wav-5a681fec689543c364443eb4f8ef2c1c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

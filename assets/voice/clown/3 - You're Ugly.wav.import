@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ioukqkrlxji6"
+path="res://.godot/imported/3 - You're Ugly.wav-079c91b2e5f653278bd53cafae32b6bc.sample"
+
+[deps]
+
+source_file="res://assets/voice/clown/3 - You're Ugly.wav"
+dest_files=["res://.godot/imported/3 - You're Ugly.wav-079c91b2e5f653278bd53cafae32b6bc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

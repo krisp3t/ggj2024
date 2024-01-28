@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c8bpdg2cpm75h"
+path="res://.godot/imported/6 - Derpy Laugh 2.wav-c2c690bae33f5c1822b8ece3e503e59a.sample"
+
+[deps]
+
+source_file="res://assets/voice/clown/6 - Derpy Laugh 2.wav"
+dest_files=["res://.godot/imported/6 - Derpy Laugh 2.wav-c2c690bae33f5c1822b8ece3e503e59a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

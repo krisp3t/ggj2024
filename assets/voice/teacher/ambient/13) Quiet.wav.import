@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://6x4nplwgb7an"
+path="res://.godot/imported/13) Quiet.wav-8d7bfc8acb66a3a5d6e80837d5618f29.sample"
+
+[deps]
+
+source_file="res://assets/voice/teacher/ambient/13) Quiet.wav"
+dest_files=["res://.godot/imported/13) Quiet.wav-8d7bfc8acb66a3a5d6e80837d5618f29.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

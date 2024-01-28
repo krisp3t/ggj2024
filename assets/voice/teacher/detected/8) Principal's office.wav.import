@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://vi003rl283ew"
+path="res://.godot/imported/8) Principal's office.wav-1ab8051556fc135d2082e25cb46e4284.sample"
+
+[deps]
+
+source_file="res://assets/voice/teacher/detected/8) Principal's office.wav"
+dest_files=["res://.godot/imported/8) Principal's office.wav-1ab8051556fc135d2082e25cb46e4284.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

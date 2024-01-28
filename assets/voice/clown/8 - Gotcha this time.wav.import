@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://gdx07jn5m6co"
+path="res://.godot/imported/8 - Gotcha this time.wav-3d64ea8c386baf3c733881db496edfe8.sample"
+
+[deps]
+
+source_file="res://assets/voice/clown/8 - Gotcha this time.wav"
+dest_files=["res://.godot/imported/8 - Gotcha this time.wav-3d64ea8c386baf3c733881db496edfe8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

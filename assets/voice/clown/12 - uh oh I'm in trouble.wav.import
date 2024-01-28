@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bh8xgw04f4h8d"
+path="res://.godot/imported/12 - uh oh I'm in trouble.wav-d199e565ae60f0d8381fb8c698ed98c8.sample"
+
+[deps]
+
+source_file="res://assets/voice/clown/12 - uh oh I'm in trouble.wav"
+dest_files=["res://.godot/imported/12 - uh oh I'm in trouble.wav-d199e565ae60f0d8381fb8c698ed98c8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dnr1o5qqkfsb0"
+path="res://.godot/imported/10 - Take that you filthy animals.wav-a45c68397d5e67bf8140213bddc18ada.sample"
+
+[deps]
+
+source_file="res://assets/voice/clown/10 - Take that you filthy animals.wav"
+dest_files=["res://.godot/imported/10 - Take that you filthy animals.wav-a45c68397d5e67bf8140213bddc18ada.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
