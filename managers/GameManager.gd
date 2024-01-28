@@ -22,6 +22,7 @@ func get_level() -> String:
 	match current_level:
 		1: return "res://levels/Classroom1.tscn";
 		2: return "res://levels/Classroom2.tscn";
+		3: return "res://levels/Classroom3.tscn";
 		_: return "";
 
 func _process(_delta) -> void:
