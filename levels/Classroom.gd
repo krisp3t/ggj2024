@@ -15,3 +15,4 @@ func _on_ground_area_body_entered(body):
 		await get_tree().create_timer(0.5).timeout;
 		if is_instance_valid(body):
 			body.queue_free();
+
