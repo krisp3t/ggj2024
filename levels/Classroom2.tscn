@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cvc1vqmb0kuo0"]
+[gd_scene load_steps=35 format=3 uid="uid://cvc1vqmb0kuo0"]
 
 [ext_resource type="Texture2D" uid="uid://d01eqxjh7q5qr" path="res://assets/tilemap/png/tilemap.png" id="1_7b3np"]
 [ext_resource type="Script" path="res://levels/Classroom.gd" id="1_cglam"]
@@ -9,11 +9,18 @@
 [ext_resource type="Script" path="res://scenes/Player.gd" id="6_pjtlu"]
 [ext_resource type="PackedScene" uid="uid://bxgdjmmkcuxcf" path="res://scenes/Enemy.tscn" id="7_3ie0d"]
 [ext_resource type="Texture2D" uid="uid://dy0umnvwsjsl4" path="res://assets/sprites/png/classmate6.png" id="8_kaybi"]
-[ext_resource type="PackedScene" uid="uid://djdiidob2dv76" path="res://scenes/Obstacle.tscn" id="8_yhqh0"]
-[ext_resource type="PackedScene" uid="uid://hmrlxi85856j" path="res://scenes/Table.tscn" id="10_bcbsp"]
-[ext_resource type="PackedScene" uid="uid://bwewnoa1wl6bq" path="res://scenes/Chair.tscn" id="11_n2tb2"]
+[ext_resource type="PackedScene" uid="uid://bv40xhqo52p3o" path="res://scenes/Obstacle.tscn" id="8_yhqh0"]
+[ext_resource type="PackedScene" path="res://scenes/Table.tscn" id="10_bcbsp"]
+[ext_resource type="PackedScene" path="res://scenes/Chair.tscn" id="11_n2tb2"]
 [ext_resource type="Texture2D" uid="uid://0voljsmfe2v8" path="res://assets/sprites/png/book2.png" id="13_qpgmu"]
 [ext_resource type="Texture2D" uid="uid://b6705bipgxb5i" path="res://assets/sprites/png/book3.png" id="14_rgodv"]
+[ext_resource type="PackedScene" uid="uid://cw0knafwhfm2" path="res://scenes/ObstacleBag.tscn" id="15_iwifu"]
+[ext_resource type="Texture2D" uid="uid://jydu83o4iy1f" path="res://assets/sprites/png/bag.png" id="16_v3i7k"]
+[ext_resource type="PackedScene" uid="uid://yam068saw54y" path="res://scenes/NPC.tscn" id="17_q6g7c"]
+[ext_resource type="Texture2D" uid="uid://cxnt10pc8vg1k" path="res://assets/sprites/png/classmate5.png" id="18_cp1uk"]
+[ext_resource type="PackedScene" uid="uid://vsxcwwonufpx" path="res://scenes/ObstacleCase.tscn" id="19_pa6ud"]
+[ext_resource type="Texture2D" uid="uid://84v4owmwiaje" path="res://assets/sprites/png/pencilcase.png" id="20_m1b7y"]
+[ext_resource type="Texture2D" uid="uid://dk45ym5kba1gk" path="res://assets/sprites/png/classmate4.png" id="21_y60ua"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_acx0k"]
 texture = ExtResource("1_7b3np")
@@ -64,6 +71,50 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ibffp"]
 size = Vector2(1919, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mgjg7"]
+atlas = ExtResource("18_cp1uk")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kxbf5"]
+atlas = ExtResource("18_cp1uk")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_714qx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mgjg7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kxbf5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g866g"]
+atlas = ExtResource("21_y60ua")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4mipq"]
+atlas = ExtResource("21_y60ua")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rb02i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g866g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4mipq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Classroom2" type="Node2D"]
 script = ExtResource("1_cglam")
@@ -124,10 +175,13 @@ position = Vector2(502, 628)
 position = Vector2(808, 626)
 
 [node name="Table8" parent="Node2D" instance=ExtResource("10_bcbsp")]
-position = Vector2(1093, 626)
+position = Vector2(1110, 626)
 
 [node name="Chair" parent="Node2D" instance=ExtResource("11_n2tb2")]
-position = Vector2(632, 448)
+position = Vector2(632, 466)
+
+[node name="Chair2" parent="Node2D" instance=ExtResource("11_n2tb2")]
+position = Vector2(804, 663)
 
 [node name="Obstacle" parent="." instance=ExtResource("8_yhqh0")]
 position = Vector2(464, 606)
@@ -138,5 +192,26 @@ sprite = ExtResource("13_qpgmu")
 position = Vector2(550, 563)
 rotation = 0.785398
 sprite = ExtResource("14_rgodv")
+
+[node name="ObstacleBag" parent="." instance=ExtResource("15_iwifu")]
+position = Vector2(596, 375)
+sprite = ExtResource("16_v3i7k")
+
+[node name="NPC" parent="." instance=ExtResource("17_q6g7c")]
+position = Vector2(918, 426)
+sprite = SubResource("SpriteFrames_714qx")
+
+[node name="ObstacleBag2" parent="." instance=ExtResource("15_iwifu")]
+position = Vector2(1071, 586)
+sprite = ExtResource("16_v3i7k")
+
+[node name="ObstacleCase" parent="." instance=ExtResource("19_pa6ud")]
+position = Vector2(1152, 573)
+rotation = 1.5708
+sprite = ExtResource("20_m1b7y")
+
+[node name="Enemy2" parent="." instance=ExtResource("7_3ie0d")]
+position = Vector2(1211, 439)
+sprite = SubResource("SpriteFrames_rb02i")
 
 [connection signal="shot" from="Slingshot" to="." method="_on_slingshot_shot"]
