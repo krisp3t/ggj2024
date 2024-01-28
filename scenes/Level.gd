@@ -7,12 +7,16 @@ var classroom : Node2D;
 
 func _ready():
 	var classroom_scene_path = game_manager.get_level();
-	var classroom_scene = load(classroom_scene_path);
-	classroom = classroom_scene.instantiate();
-	add_child(classroom);
-	classroom.shot.connect(_on_slingshot_shot);
-	game_manager.laugh_percentage = 50.0;
-	_show_speech_bubble("Entertain the classroom!", 5);
+	if classroom_scene_path == "":
+		%PopupText.text = "You win!"
+		%PopupTexture.visible = true;
+	else:
+		var classroom_scene = load(classroom_scene_path);
+		classroom = classroom_scene.instantiate();
+		add_child(classroom);
+		classroom.shot.connect(_on_slingshot_shot);
+		game_manager.laugh_percentage = 50.0;
+		_show_speech_bubble("Entertain the classroom!", 5);
 	
 func _process(delta):
 	%EraserProgressBar.value = %EraserTimer.time_left / %EraserTimer.wait_time;

@@ -153,6 +153,7 @@ offset_bottom = 1017.0
 texture = ExtResource("5_xqa1m")
 
 [node name="PopupText" type="Label" parent="UI/PopupTexture"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 70.0
 offset_top = 104.0
@@ -166,6 +167,7 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="PopupButton" type="Button" parent="UI/PopupTexture"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 218.0
 offset_top = 237.0
