@@ -1,12 +1,12 @@
 [gd_scene load_steps=12 format=3 uid="uid://b4m0xrhkfvrl0"]
 
-[ext_resource type="PackedScene" path="res://assets/tilemap/ClassroomTiles.tscn" id="1_tq4hx"]
+[ext_resource type="PackedScene" uid="uid://fn6n7gqrbhn5" path="res://assets/tilemap/ClassroomTiles.tscn" id="1_tq4hx"]
 [ext_resource type="PackedScene" uid="uid://tj3mfref5dug" path="res://scenes/Teacher.tscn" id="2_qssuq"]
 [ext_resource type="PackedScene" uid="uid://bmuedem6qyet0" path="res://scenes/Slingshot.tscn" id="3_b8ifs"]
 [ext_resource type="PackedScene" uid="uid://va0w2xx6kel4" path="res://scenes/Projectile.tscn" id="4_2pm6k"]
 [ext_resource type="PackedScene" uid="uid://cim0uqp76txk8" path="res://scenes/Player.tscn" id="5_1jk2c"]
 [ext_resource type="Script" path="res://scenes/Player.gd" id="6_3sfay"]
-[ext_resource type="PackedScene" path="res://scenes/Table.tscn" id="7_vus3s"]
+[ext_resource type="PackedScene" uid="uid://hmrlxi85856j" path="res://scenes/Table.tscn" id="7_vus3s"]
 
 [sub_resource type="GDScript" id="GDScript_ntdhy"]
 script/source = "extends Node2D
