@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dn1nkxm4rr7fr"]
+[gd_scene load_steps=20 format=3 uid="uid://dn1nkxm4rr7fr"]
 
 [ext_resource type="Texture2D" uid="uid://d01eqxjh7q5qr" path="res://assets/tilemap/png/tilemap.png" id="1_7b3np"]
 [ext_resource type="Script" path="res://levels/Classroom.gd" id="1_kr0ym"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bv40xhqo52p3o" path="res://scenes/Obstacle.tscn" id="8_yhqh0"]
 [ext_resource type="Texture2D" uid="uid://b6705bipgxb5i" path="res://assets/sprites/png/book3.png" id="9_jl2pr"]
 [ext_resource type="Texture2D" uid="uid://0voljsmfe2v8" path="res://assets/sprites/png/book2.png" id="10_5tngh"]
+[ext_resource type="Texture2D" uid="uid://byf6x4631f3jm" path="res://assets/sprites/png/classmate1.png" id="12_a0ri7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_acx0k"]
 texture = ExtResource("1_7b3np")
@@ -40,6 +41,28 @@ absorbent = true
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ibffp"]
 size = Vector2(1919, 88)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_0hkil"]
+atlas = ExtResource("12_a0ri7")
+region = Rect2(0, 0, 16, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vhhfr"]
+atlas = ExtResource("12_a0ri7")
+region = Rect2(16, 0, 16, 27)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_thde1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0hkil")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vhhfr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Classroom1" type="Node2D"]
 script = ExtResource("1_kr0ym")
 
@@ -64,9 +87,6 @@ position = Vector2(1073, 193)
 position = Vector2(985, 929)
 script = ExtResource("6_pjtlu")
 
-[node name="Enemy" parent="." instance=ExtResource("7_3ie0d")]
-position = Vector2(985, 194)
-
 [node name="GroundArea" type="Area2D" parent="."]
 monitorable = false
 
@@ -83,6 +103,11 @@ sprite = ExtResource("9_jl2pr")
 position = Vector2(659, 555)
 rotation = -1.06989
 sprite = ExtResource("10_5tngh")
+
+[node name="Enemy" parent="." instance=ExtResource("7_3ie0d")]
+position = Vector2(877, 531)
+sprite = SubResource("SpriteFrames_thde1")
+laugh_value = 20
 
 [connection signal="shot" from="Slingshot" to="." method="_on_slingshot_shot"]
 [connection signal="body_entered" from="GroundArea" to="." method="_on_ground_area_body_entered"]

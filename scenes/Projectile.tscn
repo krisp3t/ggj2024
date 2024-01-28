@@ -8,6 +8,9 @@ radius = 27.38
 
 [node name="Projectile" type="RigidBody2D" groups=["SelectedProjectile"]]
 collision_layer = 128
+collision_mask = 128
+max_contacts_reported = 1
+contact_monitor = true
 script = ExtResource("1_hdk22")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -20,4 +23,5 @@ shape = SubResource("CircleShape2D_gmdps")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
