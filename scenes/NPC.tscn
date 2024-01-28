@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://yam068saw54y"]
 
-[ext_resource type="Script" path="res://scenes/Enemy.gd" id="1_wy4yr"]
+[ext_resource type="Script" path="res://scenes/NPC.gd" id="1_6oxvo"]
 [ext_resource type="Texture2D" uid="uid://dj1vwc5dlr865" path="res://assets/sprites/png/maincharacter.png" id="2_vygjd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h155y"]
@@ -26,11 +26,11 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n0n6l"]
-radius = 43.0
-height = 168.0
+radius = 32.0
+height = 124.0
 
 [node name="NPC" type="RigidBody2D"]
-script = ExtResource("1_wy4yr")
+script = ExtResource("1_6oxvo")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(6, 6)

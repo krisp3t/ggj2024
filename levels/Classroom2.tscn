@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://cvc1vqmb0kuo0"]
+[gd_scene load_steps=39 format=3 uid="uid://cvc1vqmb0kuo0"]
 
 [ext_resource type="Texture2D" uid="uid://d01eqxjh7q5qr" path="res://assets/tilemap/png/tilemap.png" id="1_7b3np"]
 [ext_resource type="Script" path="res://levels/Classroom.gd" id="1_cglam"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://jydu83o4iy1f" path="res://assets/sprites/png/bag.png" id="16_v3i7k"]
 [ext_resource type="PackedScene" uid="uid://yam068saw54y" path="res://scenes/NPC.tscn" id="17_q6g7c"]
 [ext_resource type="Texture2D" uid="uid://cxnt10pc8vg1k" path="res://assets/sprites/png/classmate5.png" id="18_cp1uk"]
+[ext_resource type="Script" path="res://scenes/NPC.gd" id="18_y5ksq"]
 [ext_resource type="PackedScene" uid="uid://vsxcwwonufpx" path="res://scenes/ObstacleCase.tscn" id="19_pa6ud"]
 [ext_resource type="Texture2D" uid="uid://84v4owmwiaje" path="res://assets/sprites/png/pencilcase.png" id="20_m1b7y"]
 [ext_resource type="Texture2D" uid="uid://dk45ym5kba1gk" path="res://assets/sprites/png/classmate4.png" id="21_y60ua"]
@@ -72,22 +73,22 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ibffp"]
 size = Vector2(1919, 88)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mgjg7"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_etfpt"]
 atlas = ExtResource("18_cp1uk")
 region = Rect2(0, 0, 16, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kxbf5"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2rtlw"]
 atlas = ExtResource("18_cp1uk")
 region = Rect2(16, 0, 16, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_714qx"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_shedx"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mgjg7")
+"texture": SubResource("AtlasTexture_etfpt")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kxbf5")
+"texture": SubResource("AtlasTexture_2rtlw")
 }],
 "loop": true,
 "name": &"default",
@@ -110,6 +111,28 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4mipq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bs66t"]
+atlas = ExtResource("18_cp1uk")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ol6y"]
+atlas = ExtResource("18_cp1uk")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bixve"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bs66t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ol6y")
 }],
 "loop": true,
 "name": &"default",
@@ -143,6 +166,7 @@ script = ExtResource("6_pjtlu")
 [node name="Enemy" parent="." instance=ExtResource("7_3ie0d")]
 position = Vector2(359, 446)
 sprite = SubResource("SpriteFrames_nvtp6")
+laugh_value = 9
 
 [node name="GroundArea" type="Area2D" parent="."]
 monitorable = false
@@ -181,7 +205,7 @@ position = Vector2(1110, 626)
 position = Vector2(632, 466)
 
 [node name="Chair2" parent="Node2D" instance=ExtResource("11_n2tb2")]
-position = Vector2(804, 663)
+position = Vector2(808, 674)
 
 [node name="Obstacle" parent="." instance=ExtResource("8_yhqh0")]
 position = Vector2(464, 606)
@@ -199,7 +223,8 @@ sprite = ExtResource("16_v3i7k")
 
 [node name="NPC" parent="." instance=ExtResource("17_q6g7c")]
 position = Vector2(918, 426)
-sprite = SubResource("SpriteFrames_714qx")
+script = ExtResource("18_y5ksq")
+sprite = SubResource("SpriteFrames_shedx")
 
 [node name="ObstacleBag2" parent="." instance=ExtResource("15_iwifu")]
 position = Vector2(1071, 586)
@@ -213,5 +238,10 @@ sprite = ExtResource("20_m1b7y")
 [node name="Enemy2" parent="." instance=ExtResource("7_3ie0d")]
 position = Vector2(1211, 439)
 sprite = SubResource("SpriteFrames_rb02i")
+laugh_value = 15
+
+[node name="NPC2" parent="." instance=ExtResource("17_q6g7c")]
+position = Vector2(1115, 662)
+sprite = SubResource("SpriteFrames_bixve")
 
 [connection signal="shot" from="Slingshot" to="." method="_on_slingshot_shot"]
