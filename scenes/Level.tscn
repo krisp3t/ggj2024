@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bf3mpy8vq5dxy"]
+[gd_scene load_steps=6 format=3 uid="uid://bf3mpy8vq5dxy"]
 
 [ext_resource type="Script" path="res://scenes/Level.gd" id="1_3epvc"]
 [ext_resource type="Theme" uid="uid://uy4x5o3yqavx" path="res://themes/theme.tres" id="2_a7uaf"]
 [ext_resource type="FontFile" uid="uid://dcnshewifaa33" path="res://assets/ui/HeroOfFools.ttf" id="3_m630d"]
 [ext_resource type="PackedScene" uid="uid://dn1nkxm4rr7fr" path="res://levels/Classroom1.tscn" id="4_jeht4"]
+[ext_resource type="Texture2D" uid="uid://cjww1goqxpqpq" path="res://assets/sprites/png/Speech bubble.png" id="4_w0qmc"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_3epvc")
@@ -116,6 +117,28 @@ theme_override_font_sizes/font_size = 40
 disabled = true
 text = "Spitball"
 expand_icon = true
+
+[node name="SpeechBubble" type="TextureRect" parent="UI/CanvasLayer"]
+unique_name_in_owner = true
+offset_left = 1751.0
+offset_top = 10.0
+offset_right = 2105.0
+offset_bottom = 236.0
+texture = ExtResource("4_w0qmc")
+
+[node name="SpeechText" type="Label" parent="UI/CanvasLayer"]
+unique_name_in_owner = true
+offset_left = 1594.0
+offset_top = 24.0
+offset_right = 1876.0
+offset_bottom = 168.0
+theme = ExtResource("2_a7uaf")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "I saw you!!! 
+⸨◺_◿⸩"
+vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="Classroom" parent="." instance=ExtResource("4_jeht4")]
 unique_name_in_owner = true
