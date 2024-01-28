@@ -31,7 +31,7 @@ func spawn_projectile(type : ProjectileType) -> Projectile:
 	var texture : String;
 	match type:
 		ProjectileType.ERASER:
-			texture = "res://assets/sprites/png/eraser.png";
+			texture = "res://assets/sprites/png/raser.png";
 		ProjectileType.SPITBALL:
 			texture = "res://assets/sprites/png/spitball.png";
 	var projectile := projectile_scene.instantiate();
